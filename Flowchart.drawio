@@ -19,7 +19,7 @@
         <mxCell id="q5Ol9iBDX5N9DacOEivH-5" value="Merchant 4 Epilogue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="1020" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="q5Ol9iBDX5N9DacOEivH-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" target="q5Ol9iBDX5N9DacOEivH-1">
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-6" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-13" target="q5Ol9iBDX5N9DacOEivH-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="280" y="120" as="sourcePoint" />
             <mxPoint x="450" y="160" as="targetPoint" />
@@ -37,14 +37,35 @@
             <mxPoint x="420" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q5Ol9iBDX5N9DacOEivH-10" value="Precursor missions" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="200" y="70" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="q5Ol9iBDX5N9DacOEivH-11" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-10">
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-11" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-13">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="260" y="160" as="sourcePoint" />
+            <mxPoint x="280" y="110" as="sourcePoint" />
             <mxPoint x="310" y="110" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-12" value="Reaction to war begins" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-13" target="q5Ol9iBDX5N9DacOEivH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-13" value="&lt;div&gt;Precursor&lt;/div&gt;&lt;div&gt;missions&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-15" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-2" target="q5Ol9iBDX5N9DacOEivH-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="100" as="sourcePoint" />
+            <mxPoint x="590" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-16" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="120" as="sourcePoint" />
+            <mxPoint x="700" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-17" value="Visit&lt;br&gt;Oathkeepers" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="700" y="70" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
