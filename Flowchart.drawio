@@ -1,9 +1,24 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" version="25.0.1">
   <diagram name="Page-1" id="sSQ3XWT55B7B16dKp4Kf">
-    <mxGraphModel>
+    <mxGraphModel dx="954" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-1" value="Merchant 0 Prologue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-2" value="Merchant 1 Start" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-3" value="Merchant 2 Middle" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-4" value="Merchant 3 End" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q5Ol9iBDX5N9DacOEivH-5" value="Merchant 4 Epilogue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
