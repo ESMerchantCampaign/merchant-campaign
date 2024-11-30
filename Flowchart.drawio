@@ -46,9 +46,6 @@
         <mxCell id="q5Ol9iBDX5N9DacOEivH-12" value="Reaction to war begins" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="70" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="q5Ol9iBDX5N9DacOEivH-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-13" target="q5Ol9iBDX5N9DacOEivH-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="q5Ol9iBDX5N9DacOEivH-13" value="&lt;div&gt;Precursor&lt;/div&gt;&lt;div&gt;missions&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="180" y="70" width="80" height="80" as="geometry" />
         </mxCell>
