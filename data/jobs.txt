@@ -1,6 +1,6 @@
 # ziproot
 
-event "joined the mercantile"
+event "joined republic mercantile"
 
 phrase "generic wholesale cargo delivery payment"
 	word
@@ -14,6 +14,7 @@ mission "Republic Mercantile Wholesale Small [0]"
 	repeat
 	to offer
 		has "event: war begins"
+		has "landing access: New China"
 		random < 50
 	source
 		near "New China" 3 10
@@ -36,7 +37,9 @@ mission "Republic Mercantile Wholesale Small [1]"
 	repeat
 	to offer
 		has "event: war begins"
+		has "landing access: New China"
 		random < 40
+		
 	source
 		near "New China" 5 15
 	destination "New China"
@@ -58,6 +61,7 @@ mission "Republic Mercantile Wholesale Large [0]"
 	repeat
 	to offer
 		has "event: war begins"
+		has "landing access: New China"
 		random < 40
 		"cargo space" >= 100
 	source
@@ -81,6 +85,7 @@ mission "Republic Mercantile Wholesale Large [1]"
 	repeat
 	to offer
 		has "event: war begins"
+		has "landing access: New China"
 		random < 30
 		"cargo space" >= 100
 	source
