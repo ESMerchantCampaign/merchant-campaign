@@ -7,94 +7,94 @@ phrase "generic wholesale cargo delivery payment"
 		`You drop off your cargo of wholesale <commodity> and collect your payment of <payment>.`
 
 mission "Republic Mercantile Wholesale Small [0]"
-  name "Shipment to <planet>"
-  description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
-  cargo random 25 2 .05
-  job
-  repeat
-  to offer
-    has "event: war begins"
-    random < 50
-  source
-    near "New China" 3 10
-  destination "New China"
-  on visit
-    dialog phrase "generic cargo on visit"
-  on complete  
-    # Double payment compared to normal
-    payment
-    payment
-    payment 3000
-    "republic mercantile jobs" ++
-    dialog phrase "generic wholesale cargo delivery payment"
+	name "Shipment to <planet>"
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	cargo random 25 2 .05
+	job
+	repeat
+	to offer
+		has "event: war begins"
+		random < 50
+	source
+		near "New China" 3 10
+	destination "New China"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete	
+		# Double payment compared to normal
+		payment
+		payment
+		payment 3000
+		"republic mercantile jobs" ++
+		dialog phrase "generic wholesale cargo delivery payment"
 
 mission "Republic Mercantile Wholesale Small [1]"
-  name "Shipment to <planet>"
-  description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
-  cargo random 25 2 .05
-  job
-  repeat
-  to offer
-    has "event: war begins"
-    random < 40
-  source
-    near "New China" 5 15
-  destination "New China"
-  on visit
-    dialog phrase "generic cargo on visit"
-  on complete  
-    # Double payment compared to normal
-    payment
-    payment
-    payment 5000
-    "republic mercantile jobs" ++
-    dialog phrase "generic wholesale cargo delivery payment"
+	name "Shipment to <planet>"
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	cargo random 25 2 .05
+	job
+	repeat
+	to offer
+		has "event: war begins"
+		random < 40
+	source
+		near "New China" 5 15
+	destination "New China"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete	
+		# Double payment compared to normal
+		payment
+		payment
+		payment 5000
+		"republic mercantile jobs" ++
+		dialog phrase "generic wholesale cargo delivery payment"
 
 mission "Republic Mercantile Wholesale Large [0]"
-  name "Shipment to <planet>"
-  description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
-  cargo random 40 2 .02
-  job
-  repeat
-  to offer
-    has "event: war begins"
-    random < 40
-    "cargo space" >= 100
-  source
-    near "New China" 3 10
-  destination "New China"
-  on visit
-    dialog phrase "generic cargo on visit"
-  on complete
-    # Double payment compared to normal
-    payment
-    payment
-    payment 9000
-    "republic mercantile jobs" ++
-    dialog phrase "generic wholesale cargo delivery payment"
+	name "Shipment to <planet>"
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	cargo random 40 2 .02
+	job
+	repeat
+	to offer
+		has "event: war begins"
+		random < 40
+		"cargo space" >= 100
+	source
+		near "New China" 3 10
+	destination "New China"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		# Double payment compared to normal
+		payment
+		payment
+		payment 9000
+		"republic mercantile jobs" ++
+		dialog phrase "generic wholesale cargo delivery payment"
 
 mission "Republic Mercantile Wholesale Large [1]"
-  name "Shipment to <planet>"
-  description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
-  cargo random 40 2 .02
-  job
-  repeat
-  to offer
-    has "event: war begins"
-    random < 30
-    "cargo space" >= 100
-  source
-    near "New China" 5 15
-  destination "New China"
-  on visit
-    dialog phrase "generic cargo on visit"
-  on complete
-    # Double payment compared to normal
-    payment
-    payment
-    payment 15000
-    "republic mercantile jobs" ++
-    dialog phrase "generic wholesale cargo delivery payment"
+	name "Shipment to <planet>"
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	cargo random 40 2 .02
+	job
+	repeat
+	to offer
+		has "event: war begins"
+		random < 30
+		"cargo space" >= 100
+	source
+		near "New China" 5 15
+	destination "New China"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		# Double payment compared to normal
+		payment
+		payment
+		payment 15000
+		"republic mercantile jobs" ++
+		dialog phrase "generic wholesale cargo delivery payment"
 
 # mOctave
 
