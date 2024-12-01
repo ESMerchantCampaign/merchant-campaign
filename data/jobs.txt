@@ -8,7 +8,7 @@ phrase "generic wholesale cargo delivery payment"
 
 mission "Republic Mercantile Wholesale Small [0]"
 	name "Shipment to <planet>"
-	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 25 2 .05
 	job
 	repeat
@@ -30,7 +30,7 @@ mission "Republic Mercantile Wholesale Small [0]"
 
 mission "Republic Mercantile Wholesale Small [1]"
 	name "Shipment to <planet>"
-	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 25 2 .05
 	job
 	repeat
@@ -52,7 +52,7 @@ mission "Republic Mercantile Wholesale Small [1]"
 
 mission "Republic Mercantile Wholesale Large [0]"
 	name "Shipment to <planet>"
-	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 40 2 .02
 	job
 	repeat
@@ -75,7 +75,7 @@ mission "Republic Mercantile Wholesale Large [0]"
 
 mission "Republic Mercantile Wholesale Large [1]"
 	name "Shipment to <planet>"
-	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile, tradesman association, so they can be repackaged for retail use. Payment is <payment>."
+	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 40 2 .02
 	job
 	repeat
