@@ -6,7 +6,7 @@ phrase "generic wholesale cargo delivery payment"
 	word
 		`You drop off your cargo of wholesale <commodity> and collect your payment of <payment>.`
 
-mission "Republic Mercantile Wholesale Small [0]"
+mission "Republic Mercantile Wholesale New China Small [0]"
 	name "Shipment to <planet>"
 	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 25 2 .05
@@ -29,7 +29,7 @@ mission "Republic Mercantile Wholesale Small [0]"
 		"republic mercantile jobs" ++
 		dialog phrase "generic wholesale cargo delivery payment"
 
-mission "Republic Mercantile Wholesale Small [1]"
+mission "Republic Mercantile Wholesale New China Small [1]"
 	name "Shipment to <planet>"
 	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 25 2 .05
@@ -53,7 +53,7 @@ mission "Republic Mercantile Wholesale Small [1]"
 		"republic mercantile jobs" ++
 		dialog phrase "generic wholesale cargo delivery payment"
 
-mission "Republic Mercantile Wholesale Large [0]"
+mission "Republic Mercantile Wholesale New China Large [0]"
 	name "Shipment to <planet>"
 	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 40 2 .02
@@ -77,7 +77,7 @@ mission "Republic Mercantile Wholesale Large [0]"
 		"republic mercantile jobs" ++
 		dialog phrase "generic wholesale cargo delivery payment"
 
-mission "Republic Mercantile Wholesale Large [1]"
+mission "Republic Mercantile Wholesale New China Large [1]"
 	name "Shipment to <planet>"
 	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
 	cargo random 40 2 .02
@@ -106,3 +106,30 @@ mission "Republic Mercantile Wholesale Large [1]"
 # SpearDane
 
 # bene-dictator
+
+# TheGiraffe3
+
+mission "Republic Mercantile Wholesale New Wales Small [0]"
+	job
+	repeat
+	name "Shipment to <planet>"
+	description "Deliver <tons> of <commodity> to <planet>, where they will be repackaged and taken across the border to hostile Free Worlds space. Payment is <payment>."
+	cargo random 10 3 .05
+	source
+		government "Republic"
+		near Sarin 4 10
+	destination "Big Sky"
+	to offer
+		has "event: war begins"
+		has "landing access: Big Sky"
+		random < 40
+		"cargo space" >= 15
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		# Double the payment.
+		payment
+		payment
+		payment 7500
+		"republic mercantile jobs" ++
+		dialog phrase "generic cargo delivery payment"
