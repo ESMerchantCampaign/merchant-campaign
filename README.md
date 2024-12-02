@@ -1,4 +1,4 @@
-~~Navy~~ Merchant campiagn when
+~~Navy~~ Merchant campaign when
 
 # Initial Pitch (with notes)
 
