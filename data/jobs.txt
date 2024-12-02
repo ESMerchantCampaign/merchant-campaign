@@ -109,6 +109,15 @@ mission "Republic Mercantile Wholesale Large [1]"
 
 # TheGiraffe3
 
+phrase "generic repaired merchant"
+	word
+		"The "
+	word
+		"captain "
+		"pilot "
+	word
+		"of the <npc> personally thanks you and gives you a payment of <payment>."
+
 mission "Republic Mercantile Free Worlds Smuggling"
 	job
 	repeat
@@ -161,3 +170,112 @@ mission "Republic Mercantile Syndicate Smuggling"
 		payment 10000
 		"republic mercantile jobs" ++
 		dialog "You drop off the cargo at a busy warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>."
+
+
+mission "Republic Mercantile Merchant Rescue [0]"
+	job
+	repeat
+	name "Rescue disabled merchant"
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>."
+	source
+		near "Merak" 0 4
+	destination "New China"
+	# There should be a random waypoint and merchant location when #10468 happens.
+	to offer
+		has "event: joined republic mercantile"
+		has "reputation: Merchant" >= 0
+		random < 30
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic repaired merchant"
+	npc accompany assist save
+		government "Merchant"
+		personality appeasing derelict escort timid waiting
+		system
+			distance 1 3
+		on encounter
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get there!"
+		on provoke
+			fail
+			dialog "You were asked to rescue the <npc>, not attack it!"
+		fleet
+			names "civilian"
+			variant 2
+				"Freighter"
+			variant
+				"Bulk Freighter"
+			variant
+				"Container Transport"
+
+mission "Republic Mercantile Merchant Rescue [1]"
+	job
+	repeat
+	name "Rescue disabled merchant"
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>."
+	source
+		near "Merak" 0 4
+	destination "New China"
+	# There should be a random waypoint and merchant location when #10468 happens.
+	to offer
+		has "event: joined republic mercantile"
+		has "reputation: Merchant" >= 0
+		random < 30
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic repaired merchant"
+	npc accompany assist save
+		government "Merchant"
+		personality appeasing derelict escort timid waiting
+		system
+			distance 1 3
+		on encounter
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get there!"
+		on provoke
+			fail
+			dialog "You were asked to rescue the <npc>, not attack it!"
+		fleet
+			names "civilian"
+			variant 2
+				"Freighter"
+			variant
+				"Bulk Freighter"
+			variant
+				"Container Transport"
+
+mission "Republic Mercantile Merchant Rescue [2]"
+	job
+	repeat
+	name "Rescue disabled merchant"
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>."
+	source
+		near "Merak" 0 4
+	destination "New China"
+	# There should be a random waypoint and merchant location when #10468 happens.
+	to offer
+		has "event: joined republic mercantile"
+		has "reputation: Merchant" >= 0
+		random < 30
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic repaired merchant"
+	npc accompany assist save
+		government "Merchant"
+		personality appeasing derelict escort timid waiting
+		system
+			distance 1 3
+		on encounter
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get there!"
+		on provoke
+			fail
+			dialog "You were asked to rescue the <npc>, not attack it!"
+		fleet
+			names "civilian"
+			variant 2
+				"Freighter"
+			variant
+				"Bulk Freighter"
+			variant
+				"Container Transport"
