@@ -117,6 +117,10 @@ phrase "generic repaired merchant"
 		"pilot "
 	word
 		"of the <npc> personally thanks you and gives you a payment of <payment>."
+		
+phrase "generic fw smuggling payment"
+	word
+		`You drop off the cargo at a warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>.`
 
 mission "Republic Mercantile Free Worlds Smuggling"
 	job
@@ -143,7 +147,7 @@ mission "Republic Mercantile Free Worlds Smuggling"
 		payment
 		payment
 		"republic mercantile jobs" += 2
-		dialog "You drop off the cargo at a warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>."
+		dialog phrase "generic fw smuggling payment"
 
 mission "Republic Mercantile Syndicate Smuggling"
 	job
@@ -169,7 +173,7 @@ mission "Republic Mercantile Syndicate Smuggling"
 		payment
 		payment 10000
 		"republic mercantile jobs" ++
-		dialog "You drop off the cargo at a busy warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>."
+		dialog phrase "generic fw smuggling payment"
 
 
 mission "Republic Mercantile Merchant Rescue [0]"
@@ -189,6 +193,7 @@ mission "Republic Mercantile Merchant Rescue [0]"
 		payment
 		payment 5000
 		dialog phrase "generic repaired merchant"
+		"republic mercantile jobs" ++
 	npc accompany assist save
 		government "Merchant"
 		personality appeasing derelict escort timid waiting
@@ -241,6 +246,7 @@ mission "Republic Mercantile Merchant Rescue [1]"
 		payment
 		payment 5000
 		dialog phrase "generic repaired merchant"
+		"republic mercantile jobs" ++
 	npc accompany assist save
 		government "Merchant"
 		personality appeasing derelict escort timid waiting
@@ -293,6 +299,7 @@ mission "Republic Mercantile Merchant Rescue [2]"
 		payment
 		payment 5000
 		dialog phrase "generic repaired merchant"
+		"republic mercantile jobs" ++
 	npc accompany assist save
 		government "Merchant"
 		personality appeasing derelict escort timid waiting
