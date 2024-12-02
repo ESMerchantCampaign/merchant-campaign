@@ -17,7 +17,7 @@ mission "Republic Mercantile Wholesale New China Small [0]"
 		has "landing access: New China"
 		random < 50
 	source
-		near "New China" 3 10
+		near Merak 3 10
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -41,7 +41,7 @@ mission "Republic Mercantile Wholesale New China Small [1]"
 		random < 40
 		
 	source
-		near "New China" 5 15
+		near Merak 5 15
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -65,7 +65,7 @@ mission "Republic Mercantile Wholesale New China Large [0]"
 		random < 40
 		"cargo space" >= 100
 	source
-		near "New China" 3 10
+		near Merak 3 10
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -89,7 +89,7 @@ mission "Republic Mercantile Wholesale New China Large [1]"
 		random < 30
 		"cargo space" >= 100
 	source
-		near "New China" 5 15
+		near Merak 5 15
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -109,21 +109,21 @@ mission "Republic Mercantile Wholesale New China Large [1]"
 
 # TheGiraffe3
 
-mission "Republic Mercantile Wholesale New Wales Small [0]"
+mission "Republic Mercantile Big Sky Small [0]"
 	job
 	repeat
 	name "Shipment to <planet>"
-	description "Deliver <tons> of <commodity> to <planet>, where they will be repackaged and taken across the border to hostile Free Worlds space. Payment is <payment>."
+	description "Deliver <tons> of <commodity> to <planet>, where they will be repackaged and taken across the border to Free Worlds space. Payment is <payment>."
 	cargo random 10 3 .05
 	source
 		government "Republic"
 		near Sarin 4 10
 	destination "Big Sky"
 	to offer
-		has "event: war begins"
-		has "landing access: Big Sky"
+		has "event: war begins
 		random < 40
 		"cargo space" >= 15
+		not "main plot completed"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -133,3 +133,54 @@ mission "Republic Mercantile Wholesale New Wales Small [0]"
 		payment 7500
 		"republic mercantile jobs" ++
 		dialog phrase "generic cargo delivery payment"
+
+mission "Republic Mercantile Big Sky Small [1]"
+	job
+	repeat
+	name "Shipment to <planet>"
+	description "Deliver <tons> of <commodity> to <planet>, where they will be repackaged and taken across the border to Free Worlds space. Payment is <payment>."
+	cargo random 10 3 .05
+	source
+		government "Republic"
+		near Sarin 4 10
+	destination "Big Sky"
+	to offer
+		has "event: war begins"
+		random < 40
+		"cargo space" >= 15
+		not "main plot completed"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		# Double the payment.
+		payment
+		payment
+		payment 7500
+		"republic mercantile jobs" ++
+		dialog phrase "generic cargo delivery payment"
+
+mission "Republic Mercantile Big Sky Smuggling"
+	job
+	repeat
+	name "Smuggled cargo to <planet>" # May need a better name.
+	description "Smuggle <tons> of repackaged <cargo> to <destination>. You will have to fly through Free Worlds space, which is hostile to the Republic, so you may be fined with an amount not more then <fine>."
+	cargo random 10 2 .08
+	source "Big Sky"
+	destination
+		government "Free Worlds"
+		near Izar 1 8
+	clearance "When the landing officer hears that you are carrying much-needed <commodity> they let you land immediately."
+	illegal 5000 "The Republic is very angry that you have been smuggling cargo to the Free Worlds, and fines you <fine>."
+	to offer
+		has "event: war begins"
+		random < 70
+		not "main plot completed"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		# Triple the payment; the Free Worlds really wants these supplies.
+		payment
+		payment
+		payment
+		"republic mercantile jobs" += 2
+		dialog "You drop off the cargo at a warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>."
