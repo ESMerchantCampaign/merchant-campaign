@@ -17,7 +17,7 @@ mission "Republic Mercantile Wholesale Small [0]"
 		has "landing access: New China"
 		random < 50
 	source
-		near "New China" 3 10
+		near Merak 3 10
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -41,7 +41,7 @@ mission "Republic Mercantile Wholesale Small [1]"
 		random < 40
 		
 	source
-		near "New China" 5 15
+		near Merak 5 15
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -65,7 +65,7 @@ mission "Republic Mercantile Wholesale Large [0]"
 		random < 40
 		"cargo space" >= 100
 	source
-		near "New China" 3 10
+		near Merak 3 10
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -89,7 +89,7 @@ mission "Republic Mercantile Wholesale Large [1]"
 		random < 30
 		"cargo space" >= 100
 	source
-		near "New China" 5 15
+		near Merak 5 15
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -106,3 +106,231 @@ mission "Republic Mercantile Wholesale Large [1]"
 # SpearDane
 
 # bene-dictator
+
+# TheGiraffe3
+
+phrase "generic repaired merchant"
+	word
+		"The "
+	word
+		"captain "
+		"pilot "
+	word
+		"of the <npc> personally thanks you and gives you a payment of <payment>."
+		
+phrase "generic fw smuggling payment"
+	word
+		`You drop off the cargo at a warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>.`
+
+mission "Republic Mercantile Free Worlds Smuggling"
+	job
+	repeat
+	name "Smuggling to <planet>" # May need a better/shorter name.
+	description "Smuggle <tons> of repackaged <cargo> to <destination>. You will be flying in Free Worlds space, which is currently hostile to the Republic, so you may be fined with an amount that should not be greater then <fine>."
+	cargo "Food" 10 2 .08
+	source "New China"
+	destination
+		government "Free Worlds"
+		near "Izar" 1 6
+	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
+	illegal 5000 "The ship that scans you learns you have been selling food to the Free Worlds and fines you <fine>." # Works because only the Republic can scan at the moment; if the Free Worlds ever get scanning capability this could be a problem.
+	to offer
+		has "event: war begins"
+		has "event: joined republic mercantile"
+		random < 30
+		not "event: fw armistice"
+		not "event: fwc peace with the navy"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		# Double the payment; the Free Worlds needs these supplies.
+		payment
+		payment
+		"republic mercantile jobs" += 2
+		dialog phrase "generic fw smuggling payment"
+
+mission "Republic Mercantile Syndicate Smuggling"
+	job
+	repeat
+	name "Smuggling to <planet>" # May need a better/shorter name.
+	description "Smuggle <tons> of repackaged <cargo> to <destination>. You will be flying in Syndicate space, which is currently hostile to the Republic because of Sol's occupation, so you may be fined with an amount that should not be greater then <fine>."
+	cargo random 10 2 .08
+	source "New China"
+	destination
+		government "Syndicate"
+		near "Markab" 1 10
+	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
+	illegal 10000 "The ship that scans you learns you have been selling goods to the Syndicate after their occupation of Sol and angrily fines you <fine>." # Works because only the Republic can scan at the moment; if the Syndicate ever gets scanning capability this could be a problem.
+	to offer
+		has "event: syndicate occupies sol"
+		has "event: joined republic mercantile"
+		random < 40
+		not "event: fw syndicate welcoming"
+		not "main plot completed"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		payment 10000
+		"republic mercantile jobs" ++
+		dialog phrase "generic fw smuggling payment"
+
+
+mission "Republic Mercantile Merchant Rescue [0]"
+	job
+	repeat
+	name "Rescue disabled merchant"
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
+	source
+		near "Merak" 0 4
+	destination "New China"
+	# There should be a random waypoint and merchant location when #10468 happens.
+	to offer
+		has "event: joined republic mercantile"
+		has "reputation: Merchant" >= 0
+		random < 30
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic repaired merchant"
+		"republic mercantile jobs" ++
+	npc accompany assist save
+		government "Merchant"
+		personality appeasing derelict escort timid waiting
+		system
+			distance 1 3
+		on encounter
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get here!"
+		on provoke
+			fail
+			dialog "You were asked to rescue the <npc>, not attack it!"
+		fleet
+			names "civilian"
+			variant 2
+				"Freighter"
+			variant
+				"Bulk Freighter"
+			variant
+				"Container Transport"
+	npc
+		government "Pirate"
+		personality heroic
+		on kill
+			payment 5000
+		system
+			distance 1 3
+		fleet 2
+			variant
+				"Fury"
+			variant
+				"Hawk"
+			variant
+				"Scrapper"
+			variant
+				"Sparrow"
+
+mission "Republic Mercantile Merchant Rescue [1]"
+	job
+	repeat
+	name "Rescue disabled merchant"
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
+	source
+		near "Merak" 0 4
+	destination "New China"
+	# There should be a random waypoint and merchant location when #10468 happens.
+	to offer
+		has "event: joined republic mercantile"
+		has "reputation: Merchant" >= 0
+		random < 30
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic repaired merchant"
+		"republic mercantile jobs" ++
+	npc accompany assist save
+		government "Merchant"
+		personality appeasing derelict escort timid waiting
+		system
+			distance 1 3
+		on encounter
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get here!"
+		on provoke
+			fail
+			dialog "You were asked to rescue the <npc>, not attack it!"
+		fleet
+			names "civilian"
+			variant 2
+				"Freighter"
+			variant
+				"Bulk Freighter"
+			variant
+				"Container Transport"
+	npc
+		government "Pirate"
+		personality heroic
+		on kill
+			payment 5000
+		system
+			distance 1 3
+		fleet 2
+			variant
+				"Fury"
+			variant
+				"Hawk"
+			variant
+				"Scrapper"
+			variant
+				"Sparrow"
+
+mission "Republic Mercantile Merchant Rescue [2]"
+	job
+	repeat
+	name "Rescue disabled merchant"
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
+	source
+		near "Merak" 0 4
+	destination "New China"
+	# There should be a random waypoint and merchant location when #10468 happens.
+	to offer
+		has "event: joined republic mercantile"
+		has "reputation: Merchant" >= 0
+		random < 30
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic repaired merchant"
+		"republic mercantile jobs" ++
+	npc accompany assist save
+		government "Merchant"
+		personality appeasing derelict escort timid waiting
+		system
+			distance 1 3
+		on encounter
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get here!"
+		on provoke
+			fail
+			dialog "You were asked to rescue the <npc>, not attack it!"
+		fleet
+			names "civilian"
+			variant 2
+				"Freighter"
+			variant
+				"Bulk Freighter"
+			variant
+				"Container Transport"
+	npc
+		government "Pirate"
+		personality heroic
+		on kill
+			payment 5000
+		system
+			distance 1 3
+		fleet 2
+			variant
+				"Fury"
+			variant
+				"Hawk"
+			variant
+				"Scrapper"
+			variant
+				"Sparrow"
