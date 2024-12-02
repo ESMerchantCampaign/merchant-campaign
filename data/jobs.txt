@@ -120,10 +120,11 @@ mission "Republic Mercantile Big Sky Small [0]"
 		near Sarin 4 10
 	destination "Big Sky"
 	to offer
-		has "event: war begins
+		has "event: war begins"
 		random < 40
 		"cargo space" >= 15
-		not "main plot completed"
+		not "event: fw armistice"
+		not "event: fwc peace with the navy"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -148,7 +149,8 @@ mission "Republic Mercantile Big Sky Small [1]"
 		has "event: war begins"
 		random < 40
 		"cargo space" >= 15
-		not "main plot completed"
+		not "event: fw armistice"
+		not "event: fwc peace with the navy"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -162,19 +164,20 @@ mission "Republic Mercantile Big Sky Small [1]"
 mission "Republic Mercantile Big Sky Smuggling"
 	job
 	repeat
-	name "Smuggled cargo to <planet>" # May need a better name.
+	name "Smuggled cargo to <planet>" # May need a better/shorter name.
 	description "Smuggle <tons> of repackaged <cargo> to <destination>. You will have to fly through Free Worlds space, which is hostile to the Republic, so you may be fined with an amount not more then <fine>."
-	cargo random 10 2 .08
+	cargo "Food" 10 2 .08
 	source "Big Sky"
 	destination
 		government "Free Worlds"
 		near Izar 1 8
-	clearance "When the landing officer hears that you are carrying much-needed <commodity> they let you land immediately."
+	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
 	illegal 5000 "The Republic is very angry that you have been smuggling cargo to the Free Worlds, and fines you <fine>."
 	to offer
 		has "event: war begins"
 		random < 70
-		not "main plot completed"
+		not "event: fw armistice"
+		not "event: fwc peace with the navy"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
