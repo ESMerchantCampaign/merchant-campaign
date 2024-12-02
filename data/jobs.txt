@@ -176,7 +176,7 @@ mission "Republic Mercantile Merchant Rescue [0]"
 	job
 	repeat
 	name "Rescue disabled merchant"
-	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>."
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
 	source
 		near "Merak" 0 4
 	destination "New China"
@@ -195,7 +195,7 @@ mission "Republic Mercantile Merchant Rescue [0]"
 		system
 			distance 1 3
 		on encounter
-			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get there!"
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get here!"
 		on provoke
 			fail
 			dialog "You were asked to rescue the <npc>, not attack it!"
@@ -207,12 +207,28 @@ mission "Republic Mercantile Merchant Rescue [0]"
 				"Bulk Freighter"
 			variant
 				"Container Transport"
+	npc
+		government "Pirate"
+		personality heroic
+		on kill
+			payment 5000
+		system
+			distance 1 3
+		fleet 2
+			variant
+				"Fury"
+			variant
+				"Hawk"
+			variant
+				"Scrapper"
+			variant
+				"Sparrow"
 
 mission "Republic Mercantile Merchant Rescue [1]"
 	job
 	repeat
 	name "Rescue disabled merchant"
-	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>."
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
 	source
 		near "Merak" 0 4
 	destination "New China"
@@ -231,7 +247,7 @@ mission "Republic Mercantile Merchant Rescue [1]"
 		system
 			distance 1 3
 		on encounter
-			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get there!"
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get here!"
 		on provoke
 			fail
 			dialog "You were asked to rescue the <npc>, not attack it!"
@@ -243,12 +259,28 @@ mission "Republic Mercantile Merchant Rescue [1]"
 				"Bulk Freighter"
 			variant
 				"Container Transport"
+	npc
+		government "Pirate"
+		personality heroic
+		on kill
+			payment 5000
+		system
+			distance 1 3
+		fleet 2
+			variant
+				"Fury"
+			variant
+				"Hawk"
+			variant
+				"Scrapper"
+			variant
+				"Sparrow"
 
 mission "Republic Mercantile Merchant Rescue [2]"
 	job
 	repeat
 	name "Rescue disabled merchant"
-	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>."
+	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
 	source
 		near "Merak" 0 4
 	destination "New China"
@@ -267,7 +299,7 @@ mission "Republic Mercantile Merchant Rescue [2]"
 		system
 			distance 1 3
 		on encounter
-			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get there!"
+			dialog "This must be the merchant you were asked to repair. Better fix them up quick before the pirates get here!"
 		on provoke
 			fail
 			dialog "You were asked to rescue the <npc>, not attack it!"
@@ -279,3 +311,19 @@ mission "Republic Mercantile Merchant Rescue [2]"
 				"Bulk Freighter"
 			variant
 				"Container Transport"
+	npc
+		government "Pirate"
+		personality heroic
+		on kill
+			payment 5000
+		system
+			distance 1 3
+		fleet 2
+			variant
+				"Fury"
+			variant
+				"Hawk"
+			variant
+				"Scrapper"
+			variant
+				"Sparrow"
