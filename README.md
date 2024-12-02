@@ -10,7 +10,9 @@ You then explicitly tell someone in a bar, twice, that you intend to be neutral.
 During the campaign, you are doing one of three things:
 
 Pacifist: Humanitarian missions, bringing people and reporters across borders. You are hired to deal with the fallout of the Alphas. You eventually find a disabled ship and discover that it has evidence of Syndicate involvement in the war. (This is more complicated than it sounds as you don’t know if telling the Free Worlds will just lead to more war)
+
 Mercenary: Fighting pirates and occasionally Republic, Syndicate, Free Worlds targets (this includes the option of fighting the Syndicate defector or the fleet chasing them). You are hired to fight the Alphas.
+
 Merchant: Taking advantage of the war to ship cargo from one side to the other at a markup. In this case checkmate or reconciliation is random, determining whether you ship between Syndicate/Free Worlds or Republic/Free Worlds. You are hired to supply weapons to the group fighting the Alphas.
 (E.d: At the beginning this may be more generic shipping missions or arranging trade deals rather than immediately jumping to exploiting the war for profit. The last sentence refers to the Alphas that were in Poisonwood, not the Syndicate Alphas.)
 
