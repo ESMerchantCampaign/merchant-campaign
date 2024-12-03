@@ -165,7 +165,7 @@ mission "Republic Mercantile Bounty (Staying 2)"
 		fleet
 			names "pirate"
 			variant 2
-				"Mofified Argosy"
+				"Modified Argosy"
 			variant 2
 				"Raven"
 			variant
