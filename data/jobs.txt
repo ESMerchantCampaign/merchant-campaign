@@ -6,6 +6,14 @@ phrase "generic wholesale cargo delivery payment"
 	word
 		`You drop off your cargo of wholesale <commodity> and collect your payment of <payment>.`
 
+phrase "generic cargo pickup"
+	word
+		`As soon as you arrive, dock workers load the <commodity> onto your ship.`
+
+phrase "generic passengers pickup"
+	word
+		`As soon as you arrive, the <fare> eagerly board your ship.`
+
 mission "Republic Mercantile Wholesale Small [0]"
 	name "Shipment to <planet>"
 	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
@@ -100,6 +108,107 @@ mission "Republic Mercantile Wholesale Large [1]"
 		payment 15000
 		"republic mercantile jobs" ++
 		dialog phrase "generic wholesale cargo delivery payment"
+
+mission "Republic Mercantile Martini Relief (Reconstruction)"
+	Name "Construction supplies transfer to Martini"
+	description `Due to the recent nuclear bombings, transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	job
+	repeat
+	cargo Construction 1 2 .2
+	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> for the reconstruction efforts, they give you the clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		random < 45
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic cargo pickup"
+	on visit
+		dialog phrase "generic missing stopover or cargo"
+	on complete
+		payment 15000 350
+		"republic mercantile jobs" ++
+		dialog phrase "generic cargo delivery payment"
+
+mission "Republic Mercantile Martini Relief (Medical)"
+	Name "Disaster relief transfer to Martini"
+	description `Due to the recent nuclear bombings, transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat the wounded. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	job
+	repeat
+	cargo Medical 1 2 .2
+	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> to help treat the wounded, they give you the clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		random < 40
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic cargo pickup"
+	on visit
+		dialog phrase "generic missing stopover or cargo"
+	on complete
+		payment 17500 400
+		"republic mercantile jobs" ++
+		dialog phrase "generic cargo delivery payment"
+
+mission "Republic Mercantile Martini Relief (People) [0]"
+	Name "Disaster relief transfer to Martini"
+	description `Due to the recent nuclear bombings, transfer <bunks> Republic Mercantile volunteers from <planet stopovers> to <planet> to assist in the relief effort. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	job
+	repeat
+	passengers 2 2 .3
+	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you the clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		random < 25
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic passenger pickup"
+	on visit
+		dialog phrase "generic missing stopover or passengers"
+	on complete
+		payment 20000 400
+		"republic mercantile jobs" ++
+		dialog phrase "generic passenger dropoff payment"
+
+
+mission "Republic Mercantile Martini Relief (People) [1]"
+	Name "Disaster relief transfer to Martini"
+	description `Due to the recent nuclear bombings, transfer <bunks> Republic Mercantile volunteers from <planet stopovers> to <planet> to assist in the relief effort. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	job
+	repeat
+	passengers 2 2 .3
+	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you the clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		random < 25
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic passenger pickup"
+	on visit
+		dialog phrase "generic missing stopover or passengers"
+	on complete
+		payment 20000 400
+		"republic mercantile jobs" ++
+		dialog phrase "generic passenger dropoff payment"
 
 # mOctave
 mission "Republic Mercantile Bounty (Staying 1)"
