@@ -102,6 +102,172 @@ mission "Republic Mercantile Wholesale Large [1]"
 		dialog phrase "generic wholesale cargo delivery payment"
 
 # mOctave
+mission "Republic Mercantile Bounty (Staying 1)"
+	name "Wanted raider near <system>"
+	description "A small pirate fighter named the <npc> has been taking advantage of the war to attack merchants near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 30000
+	to offer
+		has "event: war begins"
+		"combat rating" > 20
+		random < 50
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 4
+				"Sparrow"
+			variant 2
+				"Hawk"
+			variant
+				"Hawk (Speedy)"
+			variant
+				"Hawk (Rocket)"
+			variant 2
+				"Fury"
+			variant 2
+				"Fury (Bomber)"
+			variant
+				"Clipper"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 30000
+			"republic mercantile jobs" ++
+			fail
+
+mission "Republic Mercantile Bounty (Staying 2)"
+	name "Wanted raider near <system>"
+	description "A pirate ship named the <npc> has been taking advantage of the war to attack merchants near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 80000
+	to offer
+		has "event: war begins"
+		"combat rating" > 60
+		random < 20
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt" "south" "rim" "north" "near earth" "frontier"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 2
+				"Mofified Argosy"
+			variant 2
+				"Raven"
+			variant
+				"Corvette"
+			variant
+				"Leviathan"
+			variant
+				"Mule"
+				"Dagger"
+			variant
+				"Bastion"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 80000
+			"republic mercantile jobs" ++
+			fail
+
+mission "Republic Mercantile Bounty (Wandering)"
+	name "Wandering raider near <system>"
+	description "A pirate ship named the <npc> has been taking advantage of the war to attack merchants. The <npc> was last seen in <system>, but is believed to be moving. near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 100000
+	to offer
+		has "event: war begins"
+		"combat rating" > 80
+		random < 20
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt" "south" "rim" "north" "near earth" "frontier"
+	npc kill
+		government "Bounty"
+		personality waiting nemesis target uninterested
+		fleet
+			names "pirate"
+			variant
+				"Bastion"
+			variant
+				"Bastion (Heavy)"
+			variant
+				"Protector"
+			variant
+				"Mule"
+				"Dagger"
+			variant
+				"Mule (Heavy)"
+				"Dagger"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 100000
+			"republic mercantile jobs" ++
+			fail
+
+mission "Republic Mercantile Bounty (Disguised)"
+	name "Disguised raider near <system>"
+	description "A pirate warship named the <npc> is posing as a merchant in order to ambush neutral shipping near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 70000
+	to offer
+		has "event: war begins"
+		"combat rating" > 40
+		random < 30
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt"
+	npc kill
+		government "Bounty (Disguised)"
+		personality heroic staying
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 2
+				"Clipper"
+			variant
+				"Clipper (Heavy)"
+			variant 2
+				"Argosy"
+			variant 2
+				"Modified Argosy"
+			variant
+				"Modified Argosy (Gatling)"
+			variant
+				"Modified Argosy (Blaster)"
+			variant
+				"Modified Argosy (Missile)"
+			variant 2
+				"Bastion"
+			variant
+				"Bastion (Heavy)"
+			variant
+				"Osprey"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 70000
+			"republic mercantile jobs" ++
+			fail
+
+
 
 # SpearDane
 
