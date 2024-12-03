@@ -185,7 +185,7 @@ mission "Republic Mercantile Bounty (Staying 2)"
 
 mission "Republic Mercantile Bounty (Wandering)"
 	name "Wandering raider near <system>"
-	description "A pirate ship named the <npc> has been taking advantage of the war to attack merchants. The <npc> was last seen in <system>, but is believed to be moving. near the <system> system. Destroy it by <day> for payment (<payment>)."
+	description "A pirate ship named the <npc> has been taking advantage of the war to attack merchants. The <npc> was last seen in <system>, but is believed to be moving. Destroy it by <day> for payment (<payment>)."
 	repeat
 	job
 	deadline 14
