@@ -114,7 +114,7 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 	description `Due to the recent nuclear bombings, transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
-	cargo Construction 1 2 .2
+	cargo Construction 10 3 .2
 	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> for the reconstruction efforts, they give you the clearance to land."
 	to offer
 		has "landing access: New China"
@@ -139,7 +139,7 @@ mission "Republic Mercantile Martini Relief (Medical)"
 	description `Due to the recent nuclear bombings, transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat the wounded. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
-	cargo Medical 1 2 .2
+	cargo Medical 10 3 .2
 	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> to help treat the wounded, they give you the clearance to land."
 	to offer
 		has "landing access: New China"
