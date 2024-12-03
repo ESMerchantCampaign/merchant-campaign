@@ -14,9 +14,9 @@ jobs:
 
   test-parse:
     name: Data Files
-    runs-on: windows-2022
+    runs-on: self-hosted
     needs: changed
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' }}
     steps:
-    - uses: warp-core/endless-sky-test-parse@master
+    - uses: ziproot/endless-sky-test-parse@master
 
