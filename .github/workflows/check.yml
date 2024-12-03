@@ -15,7 +15,7 @@ jobs:
     name: Spelling
     needs: changed
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' || needs.changed.outputs.documentation == 'true' }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
       with:
