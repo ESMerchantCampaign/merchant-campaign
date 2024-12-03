@@ -1,4 +1,4 @@
 planet "New China"
 	add attributes "republic mercantile" "republic mercantile headquarters"
 	add description `	New China is also the headquarters of Republic Mercantile, a union of merchants across the known galaxy.`
-	add spaceport `	The warehouses for the Republic Mercantile take up one large corner, and the traffic of employees is spread throughout the city.`
+	add spaceport `	The warehouses for Republic Mercantile take up one large corner, and the traffic of employees is spread throughout the city.`
