@@ -1,4 +1,4 @@
-# Automatically update GitHub actions
+# Automatically update GitHub Actions.
 
 version: 2
 updates:
