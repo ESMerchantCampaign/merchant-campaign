@@ -120,6 +120,7 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 		has "landing access: New China"
 		has "event: war begins"
 		not "event: initial deployment 2"
+		not "flagship planet: Martini"
 		random < 45
 	source
 		near Merak 2 5
@@ -145,6 +146,7 @@ mission "Republic Mercantile Martini Relief (Medical)"
 		has "landing access: New China"
 		has "event: war begins"
 		not "event: initial deployment 2"
+		not "flagship planet: Martini"
 		random < 40
 	source
 		near Merak 2 5
@@ -170,6 +172,7 @@ mission "Republic Mercantile Martini Relief (People) [0]"
 		has "landing access: New China"
 		has "event: war begins"
 		not "event: initial deployment 2"
+		not "flagship planet: Martini"
 		random < 25
 	source
 		near Merak 2 5
@@ -196,6 +199,7 @@ mission "Republic Mercantile Martini Relief (People) [1]"
 		has "landing access: New China"
 		has "event: war begins"
 		not "event: initial deployment 2"
+		not "flagship planet: Martini"
 		random < 25
 	source
 		near Merak 2 5
