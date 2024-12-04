@@ -53,4 +53,4 @@ To save, you must both click save to save the data for draw.io, then click File-
 * We have also not decided on a salary and/or dues and any perks you get immediately besides better job board missions
 * I have asked if it is possible to change the name of New China, with Jarl Dane providing reasoning below:
 ![image](https://github.com/user-attachments/assets/98423e0a-de80-4f3c-83b8-f4c18b734f14)
-* If this gets rejected, the description will still definitely be updated to mention Republic Mercantile, either during an event or from the start of the game
+* The description of New China has been updated to mention Republic Mercantile from the start of the game, even if the name doesn't change
