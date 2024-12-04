@@ -110,8 +110,8 @@ mission "Republic Mercantile Wholesale Large [1]"
 		dialog phrase "generic wholesale cargo delivery payment"
 
 mission "Republic Mercantile Martini Relief (Reconstruction)"
-	name "Construction supplies transfer to Martini"
-	description `Due to the recent nuclear bombings, transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	name "Construction supplies to Martini"
+	description `Republic Mercantile is looking for captains willing to transfer <cargo> from a warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts after the recent nuclear bombings. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
 	cargo Construction 10 3 .2
@@ -136,8 +136,8 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 		dialog phrase "generic cargo delivery payment"
 
 mission "Republic Mercantile Martini Relief (Medical)"
-	name "Disaster relief transfer to Martini"
-	description `Due to the recent nuclear bombings, transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat the wounded. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	name "Disaster relief to Martini"
+	description `Republic Mercantile is looking for captains willing to transfer <cargo> from a warehouse on <planet stopovers> to <planet> to help treat those wounded in the recent nuclear bombings. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
 	cargo Medical 10 3 .2
@@ -162,8 +162,8 @@ mission "Republic Mercantile Martini Relief (Medical)"
 		dialog phrase "generic cargo delivery payment"
 
 mission "Republic Mercantile Martini Relief (People) [0]"
-	name "Disaster relief transfer to Martini"
-	description `Due to the recent nuclear bombings, transfer <bunks> Republic Mercantile volunteers from <planet stopovers> to <planet> to assist in the relief effort. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	name "Volunteers to Martini"
+	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
 	passengers 2 2 .3
@@ -189,8 +189,8 @@ mission "Republic Mercantile Martini Relief (People) [0]"
 
 
 mission "Republic Mercantile Martini Relief (People) [1]"
-	name "Disaster relief transfer to Martini"
-	description `Due to the recent nuclear bombings, transfer <bunks> Republic Mercantile volunteers from <planet stopovers> to <planet> to assist in the relief effort. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	name "Volunteers to Martini"
+	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
 	passengers 2 2 .3
