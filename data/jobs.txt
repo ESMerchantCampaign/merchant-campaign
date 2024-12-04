@@ -115,7 +115,7 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 	job
 	repeat
 	cargo Construction 10 3 .2
-	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> for the reconstruction efforts, they give you the clearance to land."
+	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> for the reconstruction efforts, they give you clearance to land."
 	to offer
 		has "landing access: New China"
 		has "event: war begins"
@@ -141,7 +141,7 @@ mission "Republic Mercantile Martini Relief (Medical)"
 	job
 	repeat
 	cargo Medical 10 3 .2
-	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> to help treat the wounded, they give you the clearance to land."
+	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> to help treat the wounded, they give you clearance to land."
 	to offer
 		has "landing access: New China"
 		has "event: war begins"
@@ -167,7 +167,7 @@ mission "Republic Mercantile Martini Relief (People) [0]"
 	job
 	repeat
 	passengers 2 2 .3
-	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you the clearance to land."
+	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you clearance to land."
 	to offer
 		has "landing access: New China"
 		has "event: war begins"
@@ -194,7 +194,7 @@ mission "Republic Mercantile Martini Relief (People) [1]"
 	job
 	repeat
 	passengers 2 2 .3
-	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you the clearance to land."
+	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you clearance to land."
 	to offer
 		has "landing access: New China"
 		has "event: war begins"
@@ -411,7 +411,7 @@ mission "Republic Mercantile Free Worlds Smuggling"
 	destination
 		government "Free Worlds"
 		near "Izar" 1 6
-	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
+	clearance "When the landing officer hears that you are bringing <commodity>, they let you land immediately."
 	illegal 5000 "The ship that scans you learns you have been selling food to the Free Worlds and fines you <fine>." # Works because only the Republic can scan at the moment; if the Free Worlds ever get scanning capability this could be a problem.
 	to offer
 		has "event: war begins"
@@ -438,7 +438,7 @@ mission "Republic Mercantile Syndicate Smuggling"
 	destination
 		government "Syndicate"
 		near "Markab" 1 10
-	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
+	clearance "When the landing officer hears that you are bringing <commodity>, they let you land immediately."
 	illegal 10000 "The ship that scans you learns you have been selling goods to the Syndicate after their occupation of Sol and angrily fines you <fine>." # Works because only the Republic can scan at the moment; if the Syndicate ever gets scanning capability this could be a problem.
 	to offer
 		has "event: syndicate occupies sol"
