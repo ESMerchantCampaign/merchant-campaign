@@ -19,5 +19,14 @@ mission "On Time"
             choice
                 `   "Always.`
                 `   "Of course."`
+                    goto yaas
                 `   "No, I'm busy."`
                 `   "Count me out."`
+            `   The woman's face radiates disgust, "How unremarkable." Her attention drops from you completely, and she begins giving clipped orders to her underlings.`
+            `   You continue on into the spaceport.`
+                decline
+            
+            label yaas
+                
+
+            
