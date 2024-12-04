@@ -1,1 +1,23 @@
-
+mission "On Time"
+    source "New China"
+    destination "New Austria"
+    name "On Time"
+    to offer
+        has ""
+    on offer
+        conversation
+            `   You can't help but overhear a group of people aruging loudly between two parked freighters.`
+            choice
+                `   (Apporach them and see what is happening.)`
+                `   (Ignore them.)`
+                    decline
+            `   As you approach you see that most of them are techs crawling all over the ships.`
+            `   "Intolerable." A clipped voice cuts through the chatter, "I don't care how it gets down, but we will honor the contract."`
+            `   "Ma'am." A young well-dressed man says, "Our fleet is already stretched to the limits. Everyone is out with deleveries, there is no way we can move this cargo."`
+            `   A tall stately woman, in a long black coat with short stylishly cut black hair, rips a tablet from the young man's hands, and hisses "There is always a way."`
+            `   She flicks her wrist scrolling through it, and then her eyes suddenly look up and straight at you, "Captain <last>." She says and then quickly looks back down at the tablet, "Oh the... <ship>. You've done work with us before. Would you be interested in a rush job, right now?"`
+            choice
+                `   "Always.`
+                `   "Of course."`
+                `   "No, I'm busy."`
+                `   "Count me out."`
