@@ -111,7 +111,7 @@ mission "Republic Mercantile Wholesale Large [1]"
 
 mission "Republic Mercantile Martini Relief (Reconstruction)"
 	name "Construction supplies to Martini"
-	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts after the recent nuclear bombings. Hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with reconstruction efforts after the recent nuclear bombings. Hail the spaceport controller to gain landing clearance. Payment is <payment>.`
 	job
 	repeat
 	cargo Construction 10 3 .2
@@ -137,7 +137,7 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 
 mission "Republic Mercantile Martini Relief (Medical)"
 	name "Disaster relief to Martini"
-	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat those wounded in the recent nuclear bombings. Hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat those wounded in the recent nuclear bombings. Hail the spaceport controller to gain landing clearance. Payment is <payment>.`
 	job
 	repeat
 	cargo Medical 10 3 .2
@@ -163,11 +163,11 @@ mission "Republic Mercantile Martini Relief (Medical)"
 
 mission "Republic Mercantile Martini Relief (People) [0]"
 	name "Volunteers to Martini"
-	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain landing clearance. Payment is <payment>.`
 	job
 	repeat
 	passengers 2 2 .3
-	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you clearance to land."
+	clearance "When you explain to the spaceport controller that you have a group of volunteers for Martini's disaster relief efforts on board, they give you clearance to land."
 	to offer
 		has "landing access: New China"
 		has "event: war begins"
@@ -190,11 +190,11 @@ mission "Republic Mercantile Martini Relief (People) [0]"
 
 mission "Republic Mercantile Martini Relief (People) [1]"
 	name "Volunteers to Martini"
-	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain landing clearance. Payment is <payment>.`
 	job
 	repeat
 	passengers 2 2 .3
-	clearance "When you explain to the spaceport controller that you have on board a group of volunteers for Martini's disaster relief efforts, they give you clearance to land."
+	clearance "When you explain to the spaceport controller that you have a group of volunteers for Martini's disaster relief efforts on board, they give you clearance to land."
 	to offer
 		has "landing access: New China"
 		has "event: war begins"
