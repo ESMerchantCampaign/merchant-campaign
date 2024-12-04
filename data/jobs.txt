@@ -111,7 +111,7 @@ mission "Republic Mercantile Wholesale Large [1]"
 
 mission "Republic Mercantile Martini Relief (Reconstruction)"
 	name "Construction supplies to Martini"
-	description `Republic Mercantile is looking for captains willing to transfer <cargo> from a warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts after the recent nuclear bombings. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with the reconstruction efforts after the recent nuclear bombings. Hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
 	cargo Construction 10 3 .2
@@ -137,7 +137,7 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 
 mission "Republic Mercantile Martini Relief (Medical)"
 	name "Disaster relief to Martini"
-	description `Republic Mercantile is looking for captains willing to transfer <cargo> from a warehouse on <planet stopovers> to <planet> to help treat those wounded in the recent nuclear bombings. You will need to hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
+	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat those wounded in the recent nuclear bombings. Hail the spaceport controller to gain clearance to the planet. Payment is <payment>.`
 	job
 	repeat
 	cargo Medical 10 3 .2
