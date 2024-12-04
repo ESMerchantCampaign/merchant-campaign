@@ -70,53 +70,125 @@
         <mxCell id="q5Ol9iBDX5N9DacOEivH-34" value="Early&lt;br&gt; warning&lt;br&gt;fallout" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="190" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-34" target="q5Ol9iBDX5N9DacOEivH-3">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="q5Ol9iBDX5N9DacOEivH-34" target="q5Ol9iBDX5N9DacOEivH-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="350" as="sourcePoint" />
             <mxPoint x="450" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-3">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="q5Ol9iBDX5N9DacOEivH-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="460" as="sourcePoint" />
             <mxPoint x="490" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-3" value="Mercenary" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yycrT3HuqkgCMUW2QxPK-2">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-3" value="Mercenary" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yycrT3HuqkgCMUW2QxPK-2" vertex="1" connectable="0">
           <mxGeometry x="0.2133" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-4" value="Fight pirates" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-4" value="Fight pirates" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="490" y="260" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-3">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="q5Ol9iBDX5N9DacOEivH-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="460" as="sourcePoint" />
             <mxPoint x="510" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-6" value="Merchant" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yycrT3HuqkgCMUW2QxPK-5">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-6" value="Merchant" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yycrT3HuqkgCMUW2QxPK-5" vertex="1" connectable="0">
           <mxGeometry x="-0.2667" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-7" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Arrange trade deals with Syndicate/FW" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-7" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Arrange trade deals with Syndicate/FW" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="510" y="330" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="q5Ol9iBDX5N9DacOEivH-3" target="yycrT3HuqkgCMUW2QxPK-10">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="q5Ol9iBDX5N9DacOEivH-3" target="yycrT3HuqkgCMUW2QxPK-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="460" as="sourcePoint" />
             <mxPoint x="490" y="440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-9" value="Pacifist" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yycrT3HuqkgCMUW2QxPK-8">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-9" value="Pacifist" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yycrT3HuqkgCMUW2QxPK-8" vertex="1" connectable="0">
           <mxGeometry x="0.16" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yycrT3HuqkgCMUW2QxPK-10" value="Rescue disabled merchants who just happen&amp;nbsp;&lt;div&gt;to be carrying nuclear materials&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yycrT3HuqkgCMUW2QxPK-10" value="Rescue disabled merchants who just happen&amp;nbsp;&lt;div&gt;to be carrying nuclear materials&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="510" y="410" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="yycrT3HuqkgCMUW2QxPK-10" target="XwVCiNEDH6_uNqZZWuzw-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="600" as="sourcePoint" />
+            <mxPoint x="640" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-2" value="Discover that the Syndicate has been building nukes" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="510" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-3" value="Report and unlock access&lt;div&gt;to lucrative jobs&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="530" width="185" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XwVCiNEDH6_uNqZZWuzw-2" target="XwVCiNEDH6_uNqZZWuzw-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="600" as="sourcePoint" />
+            <mxPoint x="620" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="XwVCiNEDH6_uNqZZWuzw-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="380" as="sourcePoint" />
+            <mxPoint x="750" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-6" value="Trading; who with influences Checkmate/Reconciliation" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="320" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XwVCiNEDH6_uNqZZWuzw-6" target="XwVCiNEDH6_uNqZZWuzw-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="600" as="sourcePoint" />
+            <mxPoint x="920" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-8" value="News that the FW did (Checkmate or Reconciliation)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="410" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-9" value="Get help from Oathkeepers" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="260" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="yycrT3HuqkgCMUW2QxPK-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="600" as="sourcePoint" />
+            <mxPoint x="610" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XwVCiNEDH6_uNqZZWuzw-9" target="XwVCiNEDH6_uNqZZWuzw-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="600" as="sourcePoint" />
+            <mxPoint x="840" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-12" value="Raid on Alnilam" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XwVCiNEDH6_uNqZZWuzw-12" target="XwVCiNEDH6_uNqZZWuzw-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="590" as="sourcePoint" />
+            <mxPoint x="960" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-14" value="News that FW has started Checkmate" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="270" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XwVCiNEDH6_uNqZZWuzw-3" target="XwVCiNEDH6_uNqZZWuzw-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="590" as="sourcePoint" />
+            <mxPoint x="280" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XwVCiNEDH6_uNqZZWuzw-16" value="News that FW chose Reconciliation" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="440" width="150" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
