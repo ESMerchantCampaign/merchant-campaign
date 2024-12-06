@@ -29,7 +29,7 @@ mission "Republic Mercantile Wholesale Small [0]"
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
-	on complete	
+	on complete
 		# Double payment compared to normal
 		payment
 		payment
@@ -47,7 +47,6 @@ mission "Republic Mercantile Wholesale Small [1]"
 		has "event: war begins"
 		has "landing access: New China"
 		random < 40
-		
 	source
 		near Merak 5 15
 	destination "New China"
