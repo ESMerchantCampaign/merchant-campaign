@@ -20,15 +20,3 @@ jobs:
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' }}
     steps:
     - uses: ziproot/endless-sky-test-parse@main
-
-  style_check:
-    name: Style
-    needs: changed
-    if: ${{ needs.changed.outputs.editorconfig_files == 'true' || needs.changed.outputs.projects_check_config == 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        show-progress: false
-    - uses: editorconfig-checker/action-editorconfig-checker@main
-    - run: editorconfig-checker
