@@ -55,7 +55,7 @@ mission "RM Delivery 1"
 		has "RM Delivery 1: done"
 	on offer
 		conversation
-			`	The launch pads of <source> are swarmed with work crews and ships. Something big is clearly going on. As you put down on the outskirts of the spaceport you're immedaitely approached by a representative of the Republic Mercantile. He is burly with a bald head and a long grey beard.`
+			`	The launch pads of <source> are swarmed with work crews and ships. Something big is clearly going on. As you put down on the outskirts of the spaceport you're immediately approached by a representative of the Republic Mercantile. He is burly with a bald head and a long grey beard.`
 			`	"Ser," The man says in a Deep accent, "I am Trade-Factor Ulfr with the Republic Mercantile."`
 			choice
 				`	(Say nothing.)`
@@ -70,7 +70,7 @@ mission "RM Delivery 1"
 				`	"Nope."`
 					goto nope
 				`	"First tell me what it is, and then I'll tell you if I am interested."`
-			`Fair enough. It's an easy run. Just take some bulding matierals from here to <source>."`
+			`Fair enough. It's an easy run. Just take some building matierals from here to <source>."`
 			`	He leans against your ship, "So, what'dya say?"`
 			choice
 				`	"I'll do it."`
