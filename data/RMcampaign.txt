@@ -80,7 +80,7 @@ mission "RM Delivery 1"
 			`	Ulfr frowns, "Turing down a good thing. But it's your loss. Come back if you change your mind."`
 				defer
 			label yep
-			`	"Now that's what I like to here." He gives you a warm smile, "It's nothing too hard, just take the cargo to <source>."`
+			`	"Now that's what I like to here." He nods approvingly, "It's nothing too hard, just take the cargo to <source>."`
 			
 
 
