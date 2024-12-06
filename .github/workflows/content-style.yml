@@ -1,0 +1,20 @@
+name: Content Style
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  style_check:
+    name: Style
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        show-progress: false
+    - uses: editorconfig-checker/action-editorconfig-checker@main
+    - run: editorconfig-checker
