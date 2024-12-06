@@ -19,5 +19,5 @@ jobs:
     needs: changed
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' }}
     steps:
-    - uses: ESMerchantCampaign/endless-sky-test-parse@main
+    - uses: warp-core/endless-sky-test-parse@master
 
