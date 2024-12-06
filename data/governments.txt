@@ -1,0 +1,24 @@
+government "Merchant (Escort)"
+	swizzle 5
+	"player reputation" 1
+	"attitude toward"
+		"Pirate (FW Disguised)" -0.05
+	"bribe" .1
+	"fine" 0
+	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
+	"hostile hail" "hostile civilian"
+	"hostile disabled hail" "hostile disabled"
+
+government "Pirate (FW Disguised)"
+	swizzle 2
+	color "governments: Free"
+	"player reputation" -1
+	"attitude toward"
+		"Merchant (Escort)" -0.05
+	"bribe" .1
+	"fine" 0
+	"friendly hail" "friendly fw pirate"
+	"friendly disabled hail" "friendly disabled"
+	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
