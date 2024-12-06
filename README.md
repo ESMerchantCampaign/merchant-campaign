@@ -42,7 +42,8 @@ To save, you must both click save to save the data for draw.io, then click File-
   * I made wholesale shipping jobs and plan to also make Martini relief jobs during the one month evacuation period
   * bene-dictator plans to make medical supply jobs
   * Jarl Dane is working on (timed?) delivery jobs where their freighter was disabled, so you need to make the delivery yourself
-  * mOctave is working on bounty hunter jobs
+  * mOctave made bounty hunter jobs
+  * TheGiraffe3 made smuggling and merchant rescue jobs
 * Alternatively, you will be automatically asked if you want to join if you decline Free Worlds (and eventually also Navy, Syndicate, Pirate)
 * Once you do this, you have to sign a contract stating you will not choose a side, at which point you join Republic Mercantile (and set chosen sides)
   * This unlocks higher paying jobs and starts the campaign
@@ -52,4 +53,4 @@ To save, you must both click save to save the data for draw.io, then click File-
 * We have also not decided on a salary and/or dues and any perks you get immediately besides better job board missions
 * I have asked if it is possible to change the name of New China, with Jarl Dane providing reasoning below:
 ![image](https://github.com/user-attachments/assets/98423e0a-de80-4f3c-83b8-f4c18b734f14)
-* If this gets rejected, the description will still definitely be updated to mention Republic Mercantile, either during an event or from the start of the game
+* The description of New China has been updated to mention Republic Mercantile from the start of the game, even if the name doesn't change

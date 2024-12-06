@@ -1,37 +1,38 @@
 mission "On Time"
-    source "New China"
-    destination "New Austria"
-    name "On Time"
-    to offer
-        has ""
-    on offer
-        conversation
-            `   You can't help but overhear a group of people aruging loudly between two parked freighters.`
-            choice
-                `   (Apporach them and see what is happening.)`
-                `   (Ignore them.)`
-                    decline
-            `   As you approach you see that most of them are techs crawling all over the ships.`
-            `   "Intolerable." A clipped voice cuts through the chatter, "I don't care how it gets down, but we will honor the contract."`
-            `   "Ma'am." A young well-dressed man says, "Our fleet is already stretched to the limits. Everyone is out with deleveries, there is no way we can move this cargo."`
-            `   A tall stately woman, in a long black coat with short stylishly cut black hair, rips a tablet from the young man's hands, and hisses "There is always a way."`
-            `   She flicks her wrist scrolling through it, and then her eyes suddenly look up and straight at you, "Captain <last>." She says and then quickly looks back down at the tablet, "Of the... <ship>. You've done acceptable work for us before. Would you be interested in a rush job, right now?"`
-            choice
-                `   "Always.`
-                `   "Of course."`
-                    goto yaas
-                `   "No, I'm busy."`
-                `   "Count me out."`
-            `   The woman's face radiates disgust, "How unremarkable." Her attention drops from you completely, and she begins giving clipped orders to her underlings.`
-            `   You continue on into the spaceport.`
-                decline
-            
-            label yaas
-            `   "Wonderful." She says without much emotion, and then points to one of the crews unsucessfully working on the downed freighters, "Forget about those; transfer their cargos to the <ship>."`
-            `   The crews immediately stop what they are doing and throw themselves into their new task. Machinery suddenly appears and the freighter's holds are emptied at an alarming speed.`
-            `   "The cago needs to be on <destination> in four days. There may be more work here on <source> for you when you're done." Her face hints at a frown, "Our associate fleet is struggling with the demand of a new contract."`
-            `   Her eyes flick to her well-dressed assistant, "You're fired." She then turns and heads to the nearby multistoried building, a trail of sychophants in her wake.`
-                accept
-                
+	source "New China"
+	destination "New Austria"
+	name "On Time"
+	to offer
+#		has "" # Placeholder
+	on offer
+		conversation
+			`You can't help but overhear a group of people arguing loudly between two parked freighters.`
+			choice
+				`	(Approach them and see what is happening.)`
+				`	(Ignore them.)`
+					decline
+			`	As you approach you see that most of them are techs crawling all over the ships.`
+			`	"Intolerable," a clipped voice cuts through the chatter. "I don't care how it gets down, but we will honor the contract."`
+			`	"Ma'am," a well-dressed young man says, "Our fleet is already stretched to the limits. Everyone is out with deliveries, there is no way we can move this cargo."`
+			`	A tall stately woman, in a long black coat with short stylishly cut black hair, rips a tablet from the young man's hands, and hisses, "There is always a way."`
+			`	She flicks her wrist scrolling through it, and then her eyes suddenly look up and straight at you, "Captain <last>," she says and then quickly looks back down at the tablet, "Of the... <ship>. You've done acceptable work for us before. Would you be interested in a rush job, right now?"`
+			choice
+				`	"Always."`
+					goto yaas
+				`	"Of course."`
+					goto yaas
+				`	"No, I'm busy."`
+				`	"Count me out."`
+			`	The woman's face radiates disgust. "How unremarkable." Her attention drops from you completely, and she begins giving clipped orders to her underlings.`
+			`	You continue on into the spaceport.`
+				decline
 
-            
+			label yaas
+			`	"Wonderful," she says without much emotion, and then points to one of the crews unsuccessfully working on the downed freighters. "Forget about those; transfer their cargo to the <ship>."`
+			`	The crews immediately stop what they are doing and throw themselves into their new task. Machinery suddenly appears and the freighter's holds are emptied at an alarming speed.`
+			`	"The cargo needs to be on <destination> in four days. There may be more work here on <source> for you when you're done." Her face hints at a frown. "Our associate fleet is struggling with the demand of a new contract."`
+			`	Her eyes flick to her well-dressed assistant. "You're fired." She then turns and heads to the nearby multistoried building, a trail of sychophants in her wake.`
+				accept
+			
+			
+			

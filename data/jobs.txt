@@ -6,6 +6,14 @@ phrase "generic wholesale cargo delivery payment"
 	word
 		`You drop off your cargo of wholesale <commodity> and collect your payment of <payment>.`
 
+phrase "generic cargo pickup"
+	word
+		`As soon as you arrive, dock workers load the <commodity> onto your ship.`
+
+phrase "generic passenger pickup"
+	word
+		`As soon as you arrive, the <fare> eagerly board your ship.`
+
 mission "Republic Mercantile Wholesale Small [0]"
 	name "Shipment to <planet>"
 	description "Deliver <tons> of wholesale <commodity> to <planet>, the home of the Republic Mercantile tradesman association, so they can be repackaged for retail use. Payment is <payment>."
@@ -101,7 +109,278 @@ mission "Republic Mercantile Wholesale Large [1]"
 		"republic mercantile jobs" ++
 		dialog phrase "generic wholesale cargo delivery payment"
 
+mission "Republic Mercantile Martini Relief (Reconstruction)"
+	name "Construction supplies to Martini"
+	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help with reconstruction efforts after the recent nuclear bombings. Hail the spaceport controller to gain landing clearance. Payment is <payment>.`
+	job
+	repeat
+	cargo Construction 10 3 .2
+	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> for the reconstruction efforts, they give you clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		not "flagship planet: Martini"
+		random < 45
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic cargo pickup"
+	on visit
+		dialog phrase "generic missing stopover or cargo"
+	on complete
+		payment 15000 350
+		"republic mercantile jobs" ++
+		dialog phrase "generic cargo delivery payment"
+
+mission "Republic Mercantile Martini Relief (Medical)"
+	name "Disaster relief to Martini"
+	description `Transfer <cargo> from a Republic Mercantile warehouse on <planet stopovers> to <planet> to help treat those wounded in the recent nuclear bombings. Hail the spaceport controller to gain landing clearance. Payment is <payment>.`
+	job
+	repeat
+	cargo Medical 10 3 .2
+	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> to help treat the wounded, they give you clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		not "flagship planet: Martini"
+		random < 40
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic cargo pickup"
+	on visit
+		dialog phrase "generic missing stopover or cargo"
+	on complete
+		payment 17500 400
+		"republic mercantile jobs" ++
+		dialog phrase "generic cargo delivery payment"
+
+mission "Republic Mercantile Martini Relief (People) [0]"
+	name "Volunteers to Martini"
+	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain landing clearance. Payment is <payment>.`
+	job
+	repeat
+	passengers 2 2 .3
+	clearance "When you explain to the spaceport controller that you have a group of volunteers for Martini's disaster relief efforts on board, they give you clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		not "flagship planet: Martini"
+		random < 25
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic passenger pickup"
+	on visit
+		dialog phrase "generic missing stopover or passengers"
+	on complete
+		payment 20000 400
+		"republic mercantile jobs" ++
+		dialog phrase "generic passenger dropoff payment"
+
+
+mission "Republic Mercantile Martini Relief (People) [1]"
+	name "Volunteers to Martini"
+	description `Republic Mercantile is looking for captains willing to transfer <bunks> volunteers from <planet stopovers> to <planet> to assist in relief efforts there. You will need to hail the spaceport controller to gain landing clearance. Payment is <payment>.`
+	job
+	repeat
+	passengers 2 2 .3
+	clearance "When you explain to the spaceport controller that you have a group of volunteers for Martini's disaster relief efforts on board, they give you clearance to land."
+	to offer
+		has "landing access: New China"
+		has "event: war begins"
+		not "event: initial deployment 2"
+		not "flagship planet: Martini"
+		random < 25
+	source
+		near Merak 2 5
+	stopover "New China"
+	destination "Martini"
+	on stopover
+		dialog phrase "generic passenger pickup"
+	on visit
+		dialog phrase "generic missing stopover or passengers"
+	on complete
+		payment 20000 400
+		"republic mercantile jobs" ++
+		dialog phrase "generic passenger dropoff payment"
+
 # mOctave
+mission "Republic Mercantile Bounty (Staying 1)"
+	name "Wanted raider near <system>"
+	description "A small pirate fighter named the <npc> has been taking advantage of the war to attack merchants near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 30000
+	to offer
+		has "event: war begins"
+		"combat rating" > 20
+		random < 50
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 4
+				"Sparrow"
+			variant 2
+				"Hawk"
+			variant
+				"Hawk (Speedy)"
+			variant
+				"Hawk (Rocket)"
+			variant 2
+				"Fury"
+			variant 2
+				"Fury (Bomber)"
+			variant
+				"Clipper"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 30000
+			"republic mercantile jobs" ++
+			fail
+
+mission "Republic Mercantile Bounty (Staying 2)"
+	name "Wanted raider near <system>"
+	description "A pirate ship named the <npc> has been taking advantage of the war to attack merchants near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 80000
+	to offer
+		has "event: war begins"
+		"combat rating" > 60
+		random < 20
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt" "south" "rim" "north" "near earth" "frontier"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 2
+				"Modified Argosy"
+			variant 2
+				"Raven"
+			variant
+				"Corvette"
+			variant
+				"Leviathan"
+			variant
+				"Mule"
+				"Dagger"
+			variant
+				"Bastion"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 80000
+			"republic mercantile jobs" ++
+			fail
+
+mission "Republic Mercantile Bounty (Wandering)"
+	name "Wandering raider near <system>"
+	description "A pirate ship named the <npc> has been taking advantage of the war to attack merchants. The <npc> was last seen in <system>, but is believed to be moving. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 100000
+	to offer
+		has "event: war begins"
+		"combat rating" > 80
+		random < 20
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt" "south" "rim" "north" "near earth" "frontier"
+	npc kill
+		government "Bounty"
+		personality waiting nemesis target uninterested
+		fleet
+			names "pirate"
+			variant
+				"Bastion"
+			variant
+				"Bastion (Heavy)"
+			variant
+				"Protector"
+			variant
+				"Mule"
+				"Dagger"
+			variant
+				"Mule (Heavy)"
+				"Dagger"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 100000
+			"republic mercantile jobs" ++
+			fail
+
+mission "Republic Mercantile Bounty (Disguised)"
+	name "Disguised raider near <system>"
+	description "A pirate warship named the <npc> is posing as a merchant in order to ambush neutral shipping near the <system> system. Destroy it by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	"apparent payment" 70000
+	to offer
+		has "event: war begins"
+		"combat rating" > 40
+		random < 30
+	source
+		government "Republic" "Free Worlds" "Neutral"
+		attributes "dirt belt"
+	npc kill
+		government "Bounty (Disguised)"
+		personality heroic staying
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 2
+				"Clipper"
+			variant
+				"Clipper (Heavy)"
+			variant 2
+				"Argosy"
+			variant 2
+				"Modified Argosy"
+			variant
+				"Modified Argosy (Gatling)"
+			variant
+				"Modified Argosy (Blaster)"
+			variant
+				"Modified Argosy (Missile)"
+			variant 2
+				"Bastion"
+			variant
+				"Bastion (Heavy)"
+			variant
+				"Osprey"
+		dialog phrase "generic hunted bounty eliminated and payment dialog"
+		on kill
+			payment 70000
+			"republic mercantile jobs" ++
+			fail
+
+
 
 # SpearDane
 
@@ -132,7 +411,7 @@ mission "Republic Mercantile Free Worlds Smuggling"
 	destination
 		government "Free Worlds"
 		near "Izar" 1 6
-	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
+	clearance "When the landing officer hears that you are bringing <commodity>, they let you land immediately."
 	illegal 5000 "The ship that scans you learns you have been selling food to the Free Worlds and fines you <fine>." # Works because only the Republic can scan at the moment; if the Free Worlds ever get scanning capability this could be a problem.
 	to offer
 		has "event: war begins"
@@ -159,7 +438,7 @@ mission "Republic Mercantile Syndicate Smuggling"
 	destination
 		government "Syndicate"
 		near "Markab" 1 10
-	clearance "When the landing officer hears that you are bringing <commodity> they let you land immediately."
+	clearance "When the landing officer hears that you are bringing <commodity>, they let you land immediately."
 	illegal 10000 "The ship that scans you learns you have been selling goods to the Syndicate after their occupation of Sol and angrily fines you <fine>." # Works because only the Republic can scan at the moment; if the Syndicate ever gets scanning capability this could be a problem.
 	to offer
 		has "event: syndicate occupies sol"
