@@ -20,3 +20,4 @@ jobs:
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' }}
     steps:
     - uses: warp-core/endless-sky-test-parse@master
+    
