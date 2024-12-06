@@ -132,6 +132,7 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 	on complete
 		payment 15000 350
 		"republic mercantile jobs" ++
+		"republic mercantile martini jobs" ++
 		dialog phrase "generic cargo delivery payment"
 
 mission "Republic Mercantile Martini Relief (Medical)"
@@ -158,6 +159,7 @@ mission "Republic Mercantile Martini Relief (Medical)"
 	on complete
 		payment 17500 400
 		"republic mercantile jobs" ++
+		"republic mercantile martini jobs" ++
 		dialog phrase "generic cargo delivery payment"
 
 mission "Republic Mercantile Martini Relief (People) [0]"
@@ -184,6 +186,7 @@ mission "Republic Mercantile Martini Relief (People) [0]"
 	on complete
 		payment 20000 400
 		"republic mercantile jobs" ++
+		"republic mercantile martini jobs" ++
 		dialog phrase "generic passenger dropoff payment"
 
 
@@ -212,6 +215,7 @@ mission "Republic Mercantile Martini Relief (People) [1]"
 		payment 20000 400
 		"republic mercantile jobs" ++
 		dialog phrase "generic passenger dropoff payment"
+
 
 # mOctave
 mission "Republic Mercantile Bounty (Staying 1)"
@@ -253,6 +257,7 @@ mission "Republic Mercantile Bounty (Staying 1)"
 		on kill
 			payment 30000
 			"republic mercantile jobs" ++
+			"republic mercantile bounty jobs" ++
 			fail
 
 mission "Republic Mercantile Bounty (Staying 2)"
@@ -293,6 +298,7 @@ mission "Republic Mercantile Bounty (Staying 2)"
 		on kill
 			payment 80000
 			"republic mercantile jobs" ++
+			"republic mercantile bounty jobs" ++
 			fail
 
 mission "Republic Mercantile Bounty (Wandering)"
@@ -330,6 +336,7 @@ mission "Republic Mercantile Bounty (Wandering)"
 		on kill
 			payment 100000
 			"republic mercantile jobs" ++
+			"republic mercantile bounty jobs" ++
 			fail
 
 mission "Republic Mercantile Bounty (Disguised)"
@@ -377,6 +384,7 @@ mission "Republic Mercantile Bounty (Disguised)"
 		on kill
 			payment 70000
 			"republic mercantile jobs" ++
+			"republic mercantile bounty jobs" ++
 			fail
 
 
@@ -425,6 +433,7 @@ mission "Republic Mercantile Free Worlds Smuggling"
 		payment
 		payment
 		"republic mercantile jobs" += 2
+		"republic mercantile free worlds smuggling" ++
 		dialog phrase "generic fw smuggling payment"
 
 mission "Republic Mercantile Syndicate Smuggling"
@@ -451,6 +460,7 @@ mission "Republic Mercantile Syndicate Smuggling"
 		payment
 		payment 10000
 		"republic mercantile jobs" ++
+		"republic mercantile syndicate smuggling" ++
 		dialog phrase "generic fw smuggling payment"
 
 
@@ -464,14 +474,18 @@ mission "Republic Mercantile Merchant Rescue [0]"
 	destination "New China"
 	# There should be a random waypoint and merchant location when #10468 happens.
 	to offer
-		has "event: joined republic mercantile"
+		or
+			and
+				has "event: joined republic mercantile"
+				random < 35
+			random < 20
 		has "reputation: Merchant" >= 0
-		random < 30
 	on complete
 		payment
 		payment 5000
 		dialog phrase "generic repaired merchant"
 		"republic mercantile jobs" ++
+		"republic mercantile rescue jobs" ++
 	npc accompany assist save
 		government "Merchant"
 		personality appeasing derelict escort timid waiting
@@ -517,14 +531,18 @@ mission "Republic Mercantile Merchant Rescue [1]"
 	destination "New China"
 	# There should be a random waypoint and merchant location when #10468 happens.
 	to offer
-		has "event: joined republic mercantile"
+		or
+			and
+				has "event: joined republic mercantile"
+				random < 35
+			random < 20
 		has "reputation: Merchant" >= 0
-		random < 30
 	on complete
 		payment
 		payment 5000
 		dialog phrase "generic repaired merchant"
 		"republic mercantile jobs" ++
+		"republic mercantile rescue jobs" ++
 	npc accompany assist save
 		government "Merchant"
 		personality appeasing derelict escort timid waiting
@@ -570,14 +588,18 @@ mission "Republic Mercantile Merchant Rescue [2]"
 	destination "New China"
 	# There should be a random waypoint and merchant location when #10468 happens.
 	to offer
-		has "event: joined republic mercantile"
+		or
+			and
+				has "event: joined republic mercantile"
+				random < 35
+			random < 20
 		has "reputation: Merchant" >= 0
-		random < 30
 	on complete
 		payment
 		payment 5000
 		dialog phrase "generic repaired merchant"
 		"republic mercantile jobs" ++
+		"republic mercantile rescue jobs" ++
 	npc accompany assist save
 		government "Merchant"
 		personality appeasing derelict escort timid waiting
