@@ -1,0 +1,5 @@
+# Data files
+[data/**.txt]
+trim_trailing_whitespace = false
+indent_style = tab
+indent_size = 8
