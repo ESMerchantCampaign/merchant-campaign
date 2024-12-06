@@ -32,7 +32,7 @@ There are two files: Flowchart.png (for viewing) and Flowchart.drawio (for editi
 
 In diagrams.net, click github, then open existing diagram, then authorize, then go to ziproot/merchant-campaign and your branch (this branch is flowchart specific), and you should be able to edit the flowchart from there. If it doesn’t show up, then I can try a different approach.
 
-To save, you must both click save to save the data for draw.io, then click File-->Export as-->Png-->Export, change the name to Flowchart.png, then click Save to save the data as an image 
+To save, you must both click save to save the data for draw.io, then click File-->Export as-->Png-->Export, change the name to Flowchart.png, then click Save to save the data as an image.
 
 # Miscellaneous info
 
