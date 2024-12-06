@@ -32,7 +32,7 @@ There are two files: Flowchart.png (for viewing) and Flowchart.drawio (for editi
 
 In diagrams.net, click github, then open existing diagram, then authorize, then go to ziproot/merchant-campaign and your branch (this branch is flowchart specific), and you should be able to edit the flowchart from there. If it doesn’t show up, then I can try a different approach.
 
-To save, you must both click save to save the data for draw.io, then click File-->Export as-->Png-->Export, change the name to Flowchart.png, then click Save to save the data as an image 
+To save, you must both click save to save the data for draw.io, then click File-->Export as-->Png-->Export, change the name to Flowchart.png, then click Save to save the data as an image.
 
 # Miscellaneous info
 
@@ -48,7 +48,7 @@ To save, you must both click save to save the data for draw.io, then click File-
 * Once you do this, you have to sign a contract stating you will not choose a side, at which point you join Republic Mercantile (and set chosen sides)
   * This unlocks higher paying jobs and starts the campaign
   * You will be asked to choose a branch immediately, and will be recommended one based on factors like combat rating, Republic Mercantile jobs, reputation with various factions, or other missions you have done, but you can choose any branch
-* Each branch will have its own character, plus one character that you talk to in the beginning prior to choosing a branch. 
+* Each branch will have its own character, plus one character that you talk to in the beginning prior to choosing a branch.
 * We have not decided on rewards for beating the campaign yet, but this can probably wait until later.
 * We have also not decided on a salary and/or dues and any perks you get immediately besides better job board missions
 * I have asked if it is possible to change the name of New China, with Jarl Dane providing reasoning below:

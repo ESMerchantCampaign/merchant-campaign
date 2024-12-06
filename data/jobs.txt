@@ -29,7 +29,7 @@ mission "Republic Mercantile Wholesale Small [0]"
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
-	on complete	
+	on complete
 		# Double payment compared to normal
 		payment
 		payment
@@ -47,13 +47,12 @@ mission "Republic Mercantile Wholesale Small [1]"
 		has "event: war begins"
 		has "landing access: New China"
 		random < 40
-		
 	source
 		near Merak 5 15
 	destination "New China"
 	on visit
 		dialog phrase "generic cargo on visit"
-	on complete	
+	on complete
 		# Double payment compared to normal
 		payment
 		payment
@@ -404,7 +403,7 @@ phrase "generic repaired merchant"
 		"pilot "
 	word
 		"of the <npc> personally thanks you and gives you a payment of <payment>."
-		
+
 phrase "generic fw smuggling payment"
 	word
 		`You drop off the cargo at a warehouse near the spaceport. Soon afterwards you are notified of a payment of <payment>.`
