@@ -69,7 +69,7 @@ mission "RM Delivery 1"
 		has "RM Delivery 0: done"
 	on offer
 		conversation
-		`	"You barely step into the large bland spaceport before you're approached by a tall man in a nodescript Syndicate business uniform. "Ah, Captain <last>! Just in time."`
+		`	"You barely step into the large minimalist spaceport before you're approached by a tall man in a nodescript Syndicate business uniform. "Ah, Captain <last>! Just in time."`
 		`	He sticks out his hand.`
 		choice
 			`	(Shake his hand.)`
@@ -80,25 +80,46 @@ mission "RM Delivery 1"
 		label shake
 		`	He proceedes to robustly shake your hand.`
 		label noshake
-		`	"I feel so priviledged to make your acquaintance, Captain. You can call me Mr. Happy. Think of me as your cargo liason here on Maker." He gives you a sly wink.`
+		`	"I feel so priviledged to make your acquaintance, Captain. You can call me Mr. Happy. Think of me as your personal Syndicate cargo liason." He gives you a sly wink.`
 		`	"I know what you're thinking, 'What's with all the interfacing? I just came here to move some quality Syndicate goods.'" He laughs, baring his too-white teeth.`
 		`	"Let's just say we like to keep things close here at the Syndicate." He says with a smile, "The less people who know where, when and what we're moving - the less chance our competitors have to catch wind of a potential windfall." He winks, "If you know what I mean."`
-		`	"Look at me chatting you up, let's get the real matter at hand - getting you paid." He pulls out a tablet and glances down at it, "We're going to need you to deliver 100 tons of Building Materials to <destination>."`
+		`	"Look at me chatting you up, let's get the real matter at hand - getting you paid!" He pulls out a tablet and glances down at it, "We're going to need you to deliver 100 tons of Building Materials to <destination>."`
 		`	He looks back up at you, "Any questions?"`
 		choice
 			`	"No."`
 			`	"What is the pay?"`
 			`	"I've actually changed my mind. I want no part of this."`
-		`	Mr. Happy pouts, "You come highly recommended from the Republic Mercantile, the money is good, and everything is legal. What more do you want?"`
+		`	Mr. Happy pouts, "The money is good, and everything is legal. What more do you want?"`
 		choice
 			`	"A million credits."`
+				goto credits
 			`	"A new ship?"`
+				goto ship
 			`	"Nothing. I am out."`
-			`	He sighs. "Well, not everyone is meant to be a successful team player, Captain <last>. You can see yourself out."`
-			`	Mr. Happy turns and promptly walks away, leaving you suddenly alone at the spaceport entrance.`
+		`	He sighs. "Well, not everyone is meant to be a successful team player, Captain <last>. You can see yourself out."`
+		`	Mr. Happy turns and promptly walks away, leaving you suddenly alone at the spaceport entrance.`
 				decline
-
-
+		label credits
+		`	Mr. Happy laughs, "Don't we all!"`
+		`	He shakes his head and smiles, "While I'd love to pay you a million credits, I am afraid it would set a bad precedent for our business dealings." He pauses, as if in thought, "But how about this; I give you a 20,000 credit bonus? Let it not be said I ever stifled burgeoning business acumen"`
+		choice
+			`	"Deal."`
+				goto deal
+			`	"No deal"`
+		label nodeal
+		`	"Shame. A lot of money and opportunity you're leaving on the table. But, not everyone is meant to be a successful team player. You can see yourself out."`
+		`	Mr. Happy turns and promptly walks away, leaving you suddenly alone at the spaceport entrance.`
+			decline
+		label ship
+		`	Mr. Happy laughs, "Don't we all!"`
+		`	He shakes his head and smiles, "While I'd love to turn over one of our brand new Protectors to you; I am afraid it would set a bad precedent for our business dealings." He pauses, as if in thought, "But how about this; I give you a 20,000 credit bonus? Let it not be said I ever stifled burgeoning business acumen"`
+		choice
+			`	"Deal."`
+				goto deal
+			`	"No deal"`
+				goto nodeal
+		label deal
+		`	`
 
 
 
