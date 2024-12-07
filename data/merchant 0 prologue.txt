@@ -1,0 +1,117 @@
+# Actual Intro Mission
+
+# Pacifist Intro
+
+# Miscellaneous Intro
+
+# Mercenary Intro
+
+mission "False Foe 1"
+	name "Escort to <planet>"
+	description "A pair of captains has requested an escort to <destination>, citing reports of pirate activity in the region. Get them there safely by <deadline> for a payment of <payment>."
+	deadline
+	to offer
+		has "republic mercantile bounty jobs"
+		random < 10 + "republic mercantile bounty jobs" * 3 + "republic mercantile jobs"
+		"combat rating" > 10
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		near "New China" 3
+	destination "Hopper"
+
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		ship "Bulk Freighter" "Rodger's Castle"
+		ship "Bulk Freighter" "Winded Dragon"
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 30
+		system destination
+		fleet "Small Southern Pirates"
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 30
+		system destination
+		fleet "Small Southern Pirates"
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 30
+		system destination
+		fleet "Small Southern Pirates"
+
+	on offer
+		conversation
+			`Walking through the spaceport, you soon come across two Bulk Freighters parked beside each other amidst a frenzy of activity. Cargo is being loaded onto the ships at a frantic pace, but the captains of the two vessels are engaged in a heated debate.`
+			choice
+				`	(See what they're arguing about.)`
+					goto argument
+				`	(Walk away.)`
+			`	As you turn to walk back to your ship, you are suddenly hailed by one of the two arguing merchant captains. "Captain <last>?! Is that you, captain?"`
+			choice
+				`	"Yes, that's me."`
+					goto me
+				`	"How do you know my name?"`
+					goto name
+				`	(Keep walking.)`
+			`	You continue walking, and the captain's hails are soon lost amidst the bustle and noise of the spaceport.`
+				decline
+			
+			label argument
+			`	As you approach the pair, one of them stops mid-sentence. "Why, that looks like Captain <last>! Captain, you're exactly who we're looking for."`
+			`	The captain, a man you have never seen before in your life, winks at you.`
+			choice
+				`	"Do you need my help with something?"`
+				`	"How do you know my name?"`
+					goto name
+
+			`	"As a matter of fact, we do," replies the first captain, a wicked grin splitting his face. "Captain Haight and I are the unlucky souls in charge of getting a shipment of mining equipment to <planet> by <deadline>. Problem is, Captain Haight here is getting cold feet over some reports of pirates in that region, and refuses to go without a 'reputable escort.' Well, I know you've done some bounty hunting for the Republic Mercantile, so I figure you're qualified. What do you say?"`
+			choice
+				`	"Sure, I'll escort you there."`
+					goto willing
+				`	"How much will you pay me?"`
+					goto pay
+				`	"Sorry, but I'm not going that way anytime soon."`
+			
+			label me
+			`	"Aha! I thought so," the captain says, a wicked grin splitting his face. "I'm Glen Rodgers, by the way, and this is Athena Haight. We're the unlucky souls in charge of getting a shipment of mining equipment to <planet> by <deadline>. Problem is, Captain Haight here is getting cold feet over some reports of pirates in that region, and refuses to go without a 'reputable escort.' Well, I know you've done some bounty hunting for the Republic Mercantile, so I figure you're qualified. What do you say?"`
+			choice
+				`	"Sure, I'll escort you there."`
+				`	"How much will you pay me?"`
+					goto pay
+				`	"Sorry, but I'm not going that way anytime soon."`
+					decline
+
+			label willing
+			`	The smile on the captain's face widens, threatening to crack it in half. "Glad to hear it! Glen Rodgers shall be forever indebted to you... quite literally, of course, with the prices as they are right now." He snaps a jaunty two-fingered salute and trots over to his ship to direct the dockworkers loading his cargo.`
+			`	Captain Haight rolls her eyes and thanks you. "Thanks for your help, captain. Just get us to <destination> by <date>, and <payment> will be yours - provided you last that long on the same coms channel as that buffoon." With that dry comment, she turns back to her ship, leaving you to return to yours.`
+				accept
+
+			label name
+			`	"Why, a captain as famous as you? How could I not know your name?" he responds. "Actually, I happened to see your name and photo on the Republic Mercantile bounty hunter list just ten minutes ago. You are Captain <last>, no?"`
+			choice
+				`	"That's me."`
+					goto me
+				`	"Sorry, you must be looking for someone else."`
+
+			`	The captain appears flabbergasted. He opens his mouth, but no words come out. As you walk away, he appears to be doing a very good impression of a beached fish.`
+				decline
+
+			label pay
+			`	Somehow, the captain's smile gets even larger as he talks, reminding you of a very agitated shark. "Money makes the world go 'round, doesn't it... funny, that. Every world I've ever been on was round, even if they were dirt poor. You know - "
+			`	"Shut up, Glen," Haight interjects. Turning to you she adds, "<payment> should cover it. How does that sound?"`
+			choice
+				`	"Sounds good to me."`
+					goto willing
+				`	"I'm afraid you'll have to find another captain."`
+					decline
+	on complete
+		conversation
+			`Landing on <planet>, Captain Rodgers seems to be in shock, as if the appearance of pirates was a personal betrayal. A very smug Captain Haight hands you a credit chip worth <payment>.`
+			`	"Based on how that went, " Captain Haight comments dryly, "we're going to need an escort going back the other way, too. Meet us in the spaceport in an hour if you're interested. Who knows, Glen might even have recovered enough to apologize for his patronizing comments and bad jokes by then."`
+		payment 40000
+	on fail
+		dialog `You have failed an essential Republic Mercantile mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
