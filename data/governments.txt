@@ -21,7 +21,7 @@ government "Republic Mercantile (Escort)"
 	"player reputation" 1
 	"attitude toward"
 		"Pirate" -0.2
-		"Pirate (FW Disguised)" -0.2
+		"Bounty (FW Disguised)" -0.2
 		"Pirate (Devil-Run Gang)" -0.2
 		"Korath" -0.2
 		"Merchant" 1
