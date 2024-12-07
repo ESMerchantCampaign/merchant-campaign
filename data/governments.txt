@@ -1,4 +1,22 @@
-government "Merchant (Escort)"
+government "Bounty (FW Disguised)"
+	"display name" "Free Worlds"
+	swizzle 2
+	color "governments: Free"
+	"player reputation" -1
+	"attitude toward"
+		"Republic Mercantile (Escort)" -0.01
+		"Merchant" -0.1
+		"Syndicate" -0.001
+		"Republic" -0.001
+	"bribe" .1
+	"fine" 0
+	"friendly hail" "friendly fw pirate"
+	"friendly disabled hail" "friendly disabled"
+	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
+
+government "Republic Mercantile (Escort)"
+	"display name" "Republic Mercantile"
 	swizzle 5
 	"player reputation" 1
 	"attitude toward"
@@ -13,19 +31,3 @@ government "Merchant (Escort)"
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
 	"hostile disabled hail" "hostile disabled"
-
-government "Pirate (FW Disguised)"
-	swizzle 2
-	color "governments: Free"
-	"player reputation" -1
-	"attitude toward"
-		"Merchant (Escort)" -0.01
-		"Merchant" -0.1
-		"Syndicate" -0.001
-		"Republic" -0.001
-	"bribe" .1
-	"fine" 0
-	"friendly hail" "friendly fw pirate"
-	"friendly disabled hail" "friendly disabled"
-	"hostile hail" "hostile pirate"
-	"hostile disabled hail" "hostile disabled pirate"
