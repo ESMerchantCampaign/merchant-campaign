@@ -2,7 +2,11 @@ government "Merchant (Escort)"
 	swizzle 5
 	"player reputation" 1
 	"attitude toward"
-		"Pirate (FW Disguised)" -0.05
+		"Pirate" -0.2
+		"Pirate (FW Disguised)" -0.2
+		"Pirate (Devil-Run Gang)" -0.2
+		"Korath" -0.2
+		"Merchant" 1
 	"bribe" .1
 	"fine" 0
 	"friendly hail" "friendly civilian"
@@ -15,7 +19,10 @@ government "Pirate (FW Disguised)"
 	color "governments: Free"
 	"player reputation" -1
 	"attitude toward"
-		"Merchant (Escort)" -0.05
+		"Merchant (Escort)" -0.01
+		"Merchant" -0.1
+		"Syndicate" -0.001
+		"Republic" -0.001
 	"bribe" .1
 	"fine" 0
 	"friendly hail" "friendly fw pirate"
