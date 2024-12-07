@@ -17,7 +17,7 @@ government "Bounty (FW Disguised)"
 
 government "Republic Mercantile (Escort)"
 	"display name" "Republic Mercantile"
-	swizzle 5
+	swizzle 13
 	"player reputation" 1
 	"attitude toward"
 		"Pirate" -0.2
