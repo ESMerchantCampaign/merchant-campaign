@@ -1,9 +1,114 @@
+
 mission "RM Delivery 0"
+	description "Pick up builing materials at <destination>."
+	source
+		attributes "near earth"
+	destination "Maker"
+	name "Moving Earth"
+	to offer
+		random < 60
+		not "event: war begins"
+	on offer
+		conversation
+			`	"Ser!" A voice with a light Deep accent hollars, "A moment."`
+			`	You turn to a man with a thick gray beard, and bald tattooed head approach you.`
+			choice
+				`	"Sure, what you want?"`
+					goto sure
+				`	"Not interested."`
+			`	He favors you with a flat expression, "Not gonna get far with that sorta attitude, I can tell ya that."`
+			`	Before you have a chance to respond he's gone; chasing after some other promising Captain.`
+				decline
+			label sure
+			`	He points to the official looking patch on his weathered jacket, "I am Ulfr with the Republic Mercantile, and I am looking for a Captain willng move some cargo. Is that Captain you?"`
+			label youin
+			choice
+				`	"Sure, long as it's legal."`
+					goto legal
+					to display
+						not "legal"
+				`	"Yeah, I'll do anything for money."`
+					goto iamin
+				`	"Pass."`
+			`	He favors you with a flat expression, "Not gonna get far with that sorta attitude, I can tell ya that."`
+			`	Before you have a chance to respond he's gone; chasing after some other promising Captain.`
+				decline
+			label legal
+			action
+				set "legal"
+			`	"Legal? Ha! The Republic Mercantile has a sterling reputation for always being above board. Most of our contracts are with the government, sometimes I not even sure where we end and the government begins."`
+			`	He slaps you on the back, "Trust me. This isn't some dusty outfit like Hroar's Haulers - we're THE Republic Mercantile, after all."`
+			`	"Now, you in or what?"`
+				goto youin
+
+			label iamin
+			`	"Outstanding. All you need to do is head on over to <destination>, pick up 100 tons of building materials, and drop them off where they tell you."`
+			choice
+				`	"Got it."`
+					goto gotit
+				`	"Where they tell me?"`
+			`	He shrugs, "You know those Syndies, the Syndicate that is, always making things hard. Contact with them says location is specified on pick up. I'll be fine, no need to worry. Now, best get to it, Captain!."`
+				accept
+			label gotit
+			action
+				clear "legal"
+			`	"Good. This goes well, we might just be having more work for ya." Ulfr slaps you on the back, and saunters back off into crowd.`
+				accept
+
+	on complete
+		dialog ` As you land on Maker you receive a text only message that someone is waiting for you in the spaceport.`
+
+
+mission "RM Delivery 1"
+	description "Pick up builing materials at <destination>."
+	source "Maker"
+	destination "Clink"
+	name "Moving Earth"
+	cargo "Reinforced Building Materials" 100
+	to offer
+		has "RM Delivery 0: done"
+	on offer
+		conversation
+		`	"You barely step into the large bland spaceport before you're approached by a tall man in a nodescript Syndicate business uniform. "Ah, Captain <last>! Just in time."`
+		`	He sticks out his hand.`
+		choice
+			`	(Shake his hand.)`
+				goto shake
+			`	(Don't shake his hand.)`
+		`	He withdraws his hand and shrugs.`
+			goto noshake
+		label shake
+		`	He proceedes to robustly shake your hand.`
+		label noshake
+		`	"I feel so priviledged to make your acquaintance, Captain. You can call me Mr. Happy. Think of me as your cargo liason here on Maker." He gives you a sly wink.`
+		`	"I know what you're thinking, 'What's with all the interfacing? I just came here to move some quality Syndicate goods.'" He laughs, baring his too-white teeth.`
+		`	"Let's just say we like to keep things close here at the Syndicate." He says with a smile, "The less people who know where, when and what we're moving - the less chance our competitors have to catch wind of a potential windfall." He winks, "If you know what I mean."`
+		`	"Look at me chatting you up, let's get the real matter at hand - getting you paid." He pulls out a tablet and glances down at it, "We're going to need you to deliver 100 tons of Building Materials to <destination>."`
+		`	He looks back up at you, "Any questions?"`
+		choice
+			`	"No."`
+			`	"What is the pay?"`
+			`	"I've actually changed my mind. I want no part of this."`
+		`	Mr. Happy pouts, "You come highly recommended from the Republic Mercantile, the money is good, and everything is legal. What more do you want?"`
+		choice
+			`	"A million credits."`
+			`	"A new ship?"`
+			`	"Nothing. I am out."`
+			`	He sighs. "Well, not everyone is meant to be a successful team player, Captain <last>. You can see yourself out."`
+			`	Mr. Happy turns and promptly walks away, leaving you suddenly alone at the spaceport entrance.`
+				decline
+
+
+
+
+
+mission "RM Delivery ?"
 	minor
 	description "Deliver Cargo to <destination> for the Republic Mercantile."
 	source "New China"
 	destination "New Austria"
 	name "On Time"
+	cargo "Reinforced Building Materials" 100
 	to offer
 #		has "" # Placeholder
 	on offer
@@ -13,7 +118,7 @@ mission "RM Delivery 0"
 				`	(Approach them and see what is happening.)`
 				`	(Ignore them.)`
 					decline
-			`	As you approach you see that most of them are techs crawling all over the ships.`
+			`	As you approach you see techs crawling all over the ships.`
 			`	"Intolerable," a clipped voice cuts through the chatter. "I don't care how it gets down, but we will honor the contract."`
 			`	"Ma'am," a well-dressed young man says, "Our fleet is already stretched to the limits. Everyone is out with deliveries, there is no way we can move this cargo."`
 			`	A tall stately woman, in a long black coat with short stylishly cut black hair, rips a tablet from the young man's hands, and hisses, "There is always a way."`
@@ -25,7 +130,7 @@ mission "RM Delivery 0"
 					goto yaas
 				`	"No, I'm busy."`
 				`	"Count me out."`
-			`	The woman's face radiates disgust. "How unremarkable." Her attention drops from you completely, and she begins giving clipped orders to her underlings.`
+			`	The woman's face radiates disgust. "How unremarkable." She appears to lose all interest in you, and begins giving clipped orders to her underlings.`
 			`	You continue on into the spaceport.`
 				decline
 
