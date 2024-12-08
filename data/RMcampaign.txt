@@ -163,7 +163,7 @@ mission "RM Delivery 1"
 		dialog `Clink's sleepy spaceport seems almost startled by your delivery. They are happy for the business though, and unload everything from your ship. Including a large lead-sealed container hidden among the building materials.`
 
 mission "RM Delivery 2"
-	description "Pick up builing materials at <destination>."
+	description "Pick up refined deuterium in <stopover> and haul it to <destination>."
 	source "Syndicate"
 	stopover "Charybdis Station"
 	destination "Bourne"
