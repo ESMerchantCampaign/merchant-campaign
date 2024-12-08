@@ -101,7 +101,7 @@ mission "False Foe 1"
 				decline
 
 			label pay
-			`	Somehow, the captain's smile gets even larger as he talks, reminding you of a very agitated shark. "Money makes the world go 'round, doesn't it... funny, that. Every world I've ever been on was round, even if they were dirt poor. You know - "
+			`	Somehow, the captain's smile gets even larger as he talks, reminding you of a very agitated shark. "Money makes the world go 'round, doesn't it... funny, that. Every world I've ever been on was round, even if they were dirt poor. You know - "`
 			`	"Shut up, Glen," Haight interjects. Turning to you she adds, "<payment> should cover it. How does that sound?"`
 			choice
 				`	"Sounds good to me."`
@@ -115,3 +115,12 @@ mission "False Foe 1"
 		payment 40000
 	on fail
 		dialog `You have failed an essential Republic Mercantile mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+
+mission "False Foe 2"
+	name "Escort to <planet>"
+	description "After being attacked by pirates on the way to Hopper, Captains Rodgers and Haight have enlisted your help as an escort to their next stop, <destination>."
+	source "Hopper"
+	destination "New China"
+	to offer
+		has "False Foe 1: done"
+	
