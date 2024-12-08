@@ -162,6 +162,19 @@ mission "RM Delivery 1"
 			payment 20000
 		dialog `Clink's sleepy spaceport seems almost startled by your delivery. They are happy for the business though, and unload everything from your ship. Including a large lead-sealed container hidden among the building materials.`
 
+mission "RM Delivery 2"
+	description "Pick up builing materials at <destination>."
+	source "Syndicate"
+	stopover "Charybdis Station"
+	destination "Bourne"
+	name "Moving Air"
+	cargo "Refined deuterium" 100
+	to offer
+		has "RM Delivery 1: done"
+		not "event: war begins"
+	on offer
+		conversation
+		`	`
 
 mission "RM Delivery ?"
 	minor
