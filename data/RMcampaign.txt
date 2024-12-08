@@ -36,7 +36,7 @@ mission "RM Delivery 0"
 			label legal
 			action
 				set "legal"
-			`	"Legal? Ha! The Republic Mercantile has a sterling reputation for always being above board. Most of our contracts are with the government, sometimes I not even sure where we end and the government begins."`
+			`	"Legal? Ha! The Republic Mercantile has a sterling reputation for always being above board. Hel, most of our contracts are with the government, sometimes I not even sure where we end and the government begins."`
 			`	He slaps you on the back, "Trust me. This isn't some dusty outfit like Hroar's Haulers - we're THE Republic Mercantile, after all."`
 			`	"Now, you in or what?"`
 				goto youin
@@ -47,7 +47,7 @@ mission "RM Delivery 0"
 				`	"Got it."`
 					goto gotit
 				`	"Where they tell me?"`
-			`	He shrugs, "You know those Syndies, the Syndicate that is, always making things hard. Contact with them says location is specified on pick up. I'll be fine, no need to worry. Now, best get to it, Captain!."`
+			`	He shrugs, "You know those Syndies, the Syndicate that is, always making things hard. Contract with them says location is specified on pick up. I'll be fine, no need to worry. Now, best get to it, Captain!."`
 				accept
 			label gotit
 			action
@@ -80,16 +80,19 @@ mission "RM Delivery 1"
 		label shake
 		`	He proceedes to robustly shake your hand.`
 		label noshake
-		`	"I feel so priviledged to make your acquaintance, Captain. You can call me Mr. Happy. Think of me as your personal Syndicate cargo liason." He gives you a sly wink.`
+		`	"I am priviledged to make your acquaintance, Captain. You can call me Mr. Happy. Think of me as your personal Syndicate cargo liason." He gives you a sly wink.`
 		`	"I know what you're thinking, 'What's with all the interfacing? I just came here to move some quality Syndicate goods.'" He laughs, baring his too-white teeth.`
 		`	"Let's just say we like to keep things close here at the Syndicate." He says with a smile, "The less people who know where, when and what we're moving - the less chance our competitors have to catch wind of a potential windfall." He winks, "If you know what I mean."`
 		`	"Look at me chatting you up, let's get the real matter at hand - getting you paid!" He pulls out a tablet and glances down at it, "We're going to need you to deliver 100 tons of Building Materials to <destination>."`
 		`	He looks back up at you, "Any questions?"`
 		choice
 			`	"No."`
+				goto noquestions
 			`	"What is the pay?"`
+				goto thepay
 			`	"I've actually changed my mind. I want no part of this."`
-		`	Mr. Happy pouts, "The money is good, and everything is legal. What more do you want?"`
+		label pout
+		`	Mr. Happy pouts, "The money is good, the job is legal. What more do you want?"`
 		choice
 			`	"A million credits."`
 				goto credits
@@ -119,8 +122,45 @@ mission "RM Delivery 1"
 			`	"No deal"`
 				goto nodeal
 		label deal
-		`	`
+		action
+			set "20k"
+		label noquestions
+		`	"Lovely. Your ship is being loaded as speak." He taps your shoulder lightly, "A word of caution - best not to speak about what and where your cargo is going to anyone. We wouldn't want our competitors catching on, would be?"`
+		`	The question appears to be rhetorical, as Mr. Happy abruptly leaves before you have a chance to answer him.`
+			accept
+		
+		label thepay
+		`	"For your expertise and your discretion we're excited to offer you a premium payout of 45,000 credits." He says it like he's doing you a huge favor.`
+		`	"Sounds good to me."`
+			goto noquestions
+		`	"How about I do it for 90,000 credits?"`
+			goto 90000
+		`	"I want a million credits.`
+			goto credits
+		`	"Not interested."`
+			goto pout
+		label 90000
+		action
+			set "90k"
+		`	Mr. Happy tilts his head slightly, the first tremors of a frown forming on his chisled face. Suddenly a large, uncomfortable smile, erupts across his face, "You drive a hard bargin, Captain <last>. Normally I'd turn such an offer down, however our time table is quite demanding. So you've got yourself a deal!"`
+		`	He gives a congratulatory slap across on the back, "Your ship is being loaded as speak." He pauses and leans in closely, "A word of caution - best not to speak about what and where your cargo is going to anyone. We wouldn't want our competitors catching on, would be?"`
+		`	The question appears to be rhetorical, as Mr. Happy abruptly leaves before you have a chance to answer him.`
+			accept
 
+		on accept
+		log "Agreed to deliver Cargo on behalf of the Republic Mercantile, for the Syndicate."
+
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 45000
+		action
+			has "90k"
+			payment 45000
+		action
+			has "20k"
+			payment 20000
+		dialog `Clink's sleepy spaceport seems almost startled by your delivery. They are happy for the business though, and unload everything from your ship. Including a large lead-sealed container hidden among the building materials.`
 
 
 mission "RM Delivery ?"
