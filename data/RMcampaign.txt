@@ -160,7 +160,7 @@ mission "RM Delivery 1"
 		action
 			has "20k"
 			payment 20000
-		dialog `Clink's sleepy spaceport seems almost startled by your delivery. They are happy for the business though, and unload everything from your ship. Including a large lead-sealed container hidden among the building materials.`
+		dialog `Clink's sleepy spaceport seems almost startled by your delivery. They are happy for the business though, and unload everything from your ship.`
 
 mission "RM Delivery 2"
 	description "Pick up refined deuterium in <stopover> and haul it to <destination>."
@@ -192,10 +192,10 @@ mission "RM Delivery 2"
 			`	"Refined deuterium? No one hauls refined deuterium. It's cheaper than air."`
 				to display
 					not "refined"
-		`	You see the shadow of a grimace threatening at the very edges of Mr. Happy's sculpted face. But it is swiftly hidden by an confidental smile. "Can't get anything past you, can I?" He winks, but his face grows slighty firm, "That's the sort of thinking we'd expect from our competitors. Always looking at the short game, never the long one."`
-		` 	He shakes his head, "Now, I am not about to give away corporate secrets. Nor am I paying you to ask questions. Now, will you do the job or not?"`
 		action
 			set "refined"
+		`	You see the shadow of a grimace threatening at the very edges of Mr. Happy's sculpted face. But it is swiftly hidden by an confidental smile. "Can't get anything past you, can I?" He winks, but his face grows slighty firm, "That's the sort of thinking we'd expect from our competitors. Always looking at the short game, never the long one."`
+		` 	He shakes his head, "Now, I am not about to give away corporate secrets. Nor am I paying you to ask questions. So, will you do the job or not?"`
 			goto label choice
 
 		`	"Same as before, 45,000 credits to do the job."`
@@ -203,6 +203,9 @@ mission "RM Delivery 2"
 			`	"Sounds good."`
 			`	"I want a 20,000 credit bonus."`
 			`	"Not worth it."`
+		`	Mr. Happy chuckles, "Shrewd. I am authorized to offer you an additional 45,000 credits. Happy?"`
+		choice
+			`	`
 
 mission "RM Delivery ?"
 	minor
