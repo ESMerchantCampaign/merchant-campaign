@@ -38,5 +38,5 @@ jobs:
       with:
         path: 'endless-sky/plugins/merchant-campaign'
     - name: Parse Datafiles
-      run: "Endless Sky"
+      run: "Endless Sky.AppImage"
       shell: bash
