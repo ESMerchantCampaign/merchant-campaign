@@ -29,7 +29,7 @@ jobs:
       run: gh release download -R endless-sky/endless-sky continuous -p ${{ env.CONTINUOUS }}
     - name: Extract and prepare continuous
       run: |
-        mv * endless-sky
+        mkdir endless-sky
         cd endless-sky
         mkdir plugins
         cd plugins
@@ -38,5 +38,5 @@ jobs:
       with:
         path: 'endless-sky/plugins/merchant-campaign'
     - name: Parse Datafiles
-      run: "'endless-sky/Endless Sky' -p"
+      run: "'Endless Sky'"
       shell: bash
