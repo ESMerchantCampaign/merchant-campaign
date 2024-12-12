@@ -30,13 +30,13 @@ jobs:
     - name: Extract and prepare continuous
       run: |
         mv * endless-sky
-        cd .\endless-sky
+        cd endless-sky
         mkdir plugins
-        cd .\plugins
+        cd plugins
         mkdir merchant-campaign
     - uses: actions/checkout@v4
       with:
-        path: '.\endless-sky\plugins\merchant-campaign'
+        path: 'endless-sky/plugins/merchant-campaign'
     - name: Parse Datafiles
-      run: "'.\\endless-sky\\Endless Sky.exe' -p"
+      run: "'endless-sky/Endless Sky' -p"
       shell: bash
