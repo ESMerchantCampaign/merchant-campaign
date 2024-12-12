@@ -18,8 +18,24 @@ jobs:
 
   test-parse:
     name: Data Files
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
+    env:
+      CONTINUOUS: Endless_Sky-win64-continuous-x86_64.AppImage
     needs: changed
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' }}
     steps:
-    - uses: warp-core/endless-sky-test-parse@master
+    - name: Download latest continuous
+      run: gh release download -R endless-sky/endless-sky continuous -p ${{ env.CONTINUOUS }}
+    - name: Extract and prepare continuous
+      run: |
+        Expand-Archive ${{ env.CONTINUOUS }} -DestinationPath endless-sky -Force
+        cd .\endless-sky
+        mkdir plugins
+        cd .\plugins
+        mkdir merchant-campaign
+    - uses: actions/checkout@v4
+      with:
+        path: '.\endless-sky\plugins\merchant-campaign'
+    - name: Parse Datafiles
+      run: "'.\\endless-sky\\Endless Sky.exe' -p"
+      shell: bash
