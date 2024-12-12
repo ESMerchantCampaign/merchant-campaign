@@ -20,7 +20,7 @@ jobs:
     name: Data Files
     runs-on: ubuntu-latest
     env:
-      CONTINUOUS: Endless_Sky-win64-continuous-x86_64.AppImage
+      CONTINUOUS: Endless_Sky-continuous-x86_64.AppImage
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     needs: changed
     if: ${{ needs.changed.outputs.workflows == 'true' || needs.changed.outputs.data_files == 'true' }}
