@@ -159,7 +159,7 @@ mission "False Foe 2A"
 			choice
 				`	"Sounds good to me."`
 				`	"Sorry, but I have other jobs I need to do instead."`
-					choice others
+					goto others
 
 			`	"Great! If it's all right with you, we'll take off just as soon as I can rouse Glen out of his stupor - I don't want the Winded Dragon's hull getting blasted by this atmosphere any more than necessary."`
 				accept
