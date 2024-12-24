@@ -59,7 +59,7 @@ mission "False Foe 1"
 				`	(Keep walking.)`
 			`	You continue walking, and the captain's hails are soon lost amidst the bustle and noise of the spaceport.`
 				decline
-			
+
 			label argument
 			`	As you approach the pair, one of them stops mid-sentence. "Why, that looks like Captain <last>! Captain, you're exactly who we're looking for."`
 			`	The captain, a man you have never seen before in your life, winks at you.`
@@ -75,7 +75,7 @@ mission "False Foe 1"
 				`	"How much will you pay me?"`
 					goto pay
 				`	"Sorry, but I'm not going that way anytime soon."`
-			
+
 			label me
 			`	"Aha! I thought so," the captain says, a wicked grin splitting his face. "I'm Glen Rodgers, by the way, and this is Athena Haight. We're the unlucky souls in charge of getting a shipment of mining equipment to <planet> by <deadline>. Problem is, Captain Haight here is getting cold feet over some reports of pirates in that region, and refuses to go without a 'reputable escort.' Well, I know you've done some bounty hunting for the Republic Mercantile, so I figure you're qualified. What do you say?"`
 			choice
@@ -160,10 +160,10 @@ mission "False Foe 2A"
 				`	"Sounds good to me."`
 				`	"Sorry, but I have other jobs I need to do instead."`
 					choice others
-			
+
 			`	"Great! If it's all right with you, we'll take off just as soon as I can rouse Glen out of his stupor - I don't want the Winded Dragon's hull getting blasted by this atmosphere any more than necessary."`
 				accept
-			
+
 			label others
 			`	"All right, I get how it is." Captain Haight stands up. "Thank you for getting us this far, at least."`
 			`	She turns and walks over to Captain Rodgers, leaving you to your own devices.`
@@ -208,7 +208,7 @@ mission "False Foe 2B"
 			label yes
 			`	"Glad to hear it. We'll leave just as soon as you're ready."`
 				accept
-	
+
 	on complete
 		conversation
 			`	Setting down on <planet>, you are met by Captain Haight and a man in a three-piece suit and tie with what looks like a gold pocket watch. "Glad to meet you, Captain <last>," he says, pumping your hand. I'm Drake Cook, Head of Republic Mercantile Security. Captain Haight was just filling me in on the events of your voyage."`
