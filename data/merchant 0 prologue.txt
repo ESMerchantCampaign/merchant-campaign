@@ -16,7 +16,7 @@ mission "False Foe 1"
 		"combat rating" > 10
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-		near "New China" 3
+		near "Merak" 3
 	destination "Hopper"
 
 	npc accompany save
