@@ -111,16 +111,108 @@ mission "False Foe 1"
 	on complete
 		conversation
 			`Landing on <planet>, Captain Rodgers seems to be in shock, as if the appearance of pirates was a personal betrayal. A very smug Captain Haight hands you a credit chip worth <payment>.`
-			`	"Based on how that went, " Captain Haight comments dryly, "we're going to need an escort going back the other way, too. Meet us in the spaceport in an hour if you're interested. Who knows, Glen might even have recovered enough to apologize for his patronizing comments and bad jokes by then."`
+			`	"Based on how that went," Captain Haight comments dryly, "we're going to need an escort going back the other way, too. Meet us in the spaceport in an hour if you're interested. Who knows, Glen might even have recovered enough to apologize for his patronizing comments and bad jokes by then."`
 		payment 40000
 	on fail
 		dialog `You have failed an essential Republic Mercantile mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 
-mission "False Foe 2"
+mission "False Foe 2A"
 	name "Escort to <planet>"
-	description "After being attacked by pirates on the way to Hopper, Captains Rodgers and Haight have enlisted your help as an escort to their next stop, <destination>."
+	description "After being attacked by pirates on the way to Hopper, Captains Rodgers and Haight have enlisted your help as an escort back to New China, via a stopover on <destination>."
 	source "Hopper"
-	destination "New China"
+	destination "New Greenland"
+	"apparent payment" 65000
 	to offer
 		has "False Foe 1: done"
+
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		ship "Bulk Freighter" "Rodger's Castle"
+		ship "Bulk Freighter" "Winded Dragon"
+
+	npc
+		government "Bounty (FW Disguised)"
+		personality nemesis staying harvests plunders
+			confusion 10
+		system destination
+		ship "Hawk (Plasma)" "F.S. Wormwood"
+
+	on offer
+		conversation
+			`When you walk into the spaceport bar, it takes you a moment to find Captain Rodgers. Finally, you see him hunched over the bar nursing a flat and seemingly undisturbed drink. Just as you're considering the best course of action, Captain Haight taps you on the shoulder.`
+			`	"Hello again, Captain <last>. Glad you stopped by. While Glen goes and wallows in self-pity and remorse, why don't you and I discuss business. Want a drink?"`
+			choice
+				`	"Yes, please."`
+					goto drink
+				`	"No, thanks."`
+					goto business
+				`	"I can buy my own drinks."`
+			`	"Right, and you can join Glen by the bar, too." She rolls her eyes, and orders you a drink anyways. Stuck with a drink and no opportunity to pay for it, you are forced to negotiate with the captain.`
+				goto business
+
+			label drink
+			`	Captain Haight flags down the bartender and orders some complicated drink that seems to be a local delicacy, thrusting it into you hand as soon as it's ready.`
+
+			label business
+			`	"Alright, then. In case it wasn't clear, we'd like your help as an escort on our return trip to New China, with a detour en-route to <destination> to drop off some supplies for the nuclear power plant there. This time around, I think I can convince Glen to chip in so we can offer you <payment>. How does that sound?"`
+			choice
+				`	"Sounds good to me."`
+				`	"Sorry, but I have other jobs I need to do instead."`
+					choice others
+			
+			`	"Great! If it's all right with you, we'll take off just as soon as I can rouse Glen out of his stupor - I don't want the Winded Dragon's hull getting blasted by this atmosphere any more than necessary."`
+				accept
+			
+			label others
+			`	"All right, I get how it is." Captain Haight stands up. "Thank you for getting us this far, at least."`
+			`	She turns and walks over to Captain Rodgers, leaving you to your own devices.`
+				decline
+	on enter "Arcturus"
+		conversation
+			`You exit hyperspace into a seemingly ordinary star system. A lone Free Worlds ship, patrolling well outside the Free Worlds' borders, turns to face your convoy as you flash towards <planet>.`
+			`	Haight's voice comes over your com network. "Captain <last>, I have a bad feeling about this."`
+			`	"A bad feeling? You never have bad feelings... except for the other 386 times in the last month," Rodgers responds. "Face it, you're just annoyed because there's no pirates to scare me this time."`
+			`	As if on cue, you see a brief flash from the Free Worlds ship. And then another. And then the sky is lighting up with plasma fire.`
+			`	"Let's get out of here," Haight says in a flat voice, "unless, of course, you want to say hello to our peaceful little friend, Glen?"`
+			`	Glen mumbles something unintelligible.`
+			`	"That's what I thought. Now, let's see if we can land on <planet> in one piece."`
+
+mission "False Foe 2B"
+	name "Escort to <planet>"
+	description "Escort Captains Rodgers and Haight back to <planet> so that they can report back to the Republic Mercantile about the disguised pirate you saw in Arcturus. Payment is <payment>."
+	source "New Greenland"
+	destination "New China"
+	landing
+	to offer
+		has "False Foe 2A: done"
+
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		ship "Bulk Freighter" "Rodger's Castle"
+		ship "Bulk Freighter" "Winded Dragon"
+
+	on offer
+		conversation
+			`If Captain Rodgers looked like a beached fish on Hopper, he looks like a drowning Skymoot dragon when you disembark the <ship>: flopping about helplessly, slightly twitchy, and dripping water. He is leaning on one of his crew members, who is holding an empty bucket. The water on his eyebrows is slowly freezing, and he'll probably be suffering from hypothermia in ten minutes unless someone gives him a towel and a warm dry spaceship to sit in.`
+			`	While you're watching Captain Rodgers' theatrics, a large hovercraft drives up to the spaceport. Four parka-clad New Greenlanders climb out and help Haight's crew transfer the supplies for the nuclear power plant. Finally, they thank her and drive off.`
+			`	Business concluded, Captain Haight walks over to stand beside your ship. "Well, Captain <last>," she asks, "Ready to go on to <destination>? We've got to finish our job and warn the Republic Mercantile about the disguised pirates, after all."`
+			choice
+				`	"Of course."`
+					goto yes
+				`	"Actually, I'm going to go my own way. It's too risky flying with Captain Rodgers."`
+			`	Haight laughs, and then realizes you weren't joking. "Very well, then. But you've just lost <payment>." She shrugs and returns to the Winded Dragon. In minutes, you are standing by yourself in the freezing cold while the two freighters scream through New Greenland's atmosphere.`
+				decline
+
+			label yes
+			`	"Glad to hear it. We'll leave just as soon as you're ready."`
+				accept
 	
+	on complete
+		conversation
+			`	Setting down on <planet>, you are met by Captain Haight and a man in a three-piece suit and tie with what looks like a gold pocket watch. "Glad to meet you, Captain <last>," he says, pumping your hand. I'm Drake Cook, Head of Republic Mercantile Security. Captain Haight was just filling me in on the events of your voyage."`
+			`	Captain Haight produces a credit chip worth <payment> and drops it into your hand. "Thank you, Captain <last>. Glen proved quite generous. I barely had to take two ounces of flesh." She winks.`
+			`	"Anyways, the long and short of it is, we'd like to talk with you about that disguised pirate you ran into in Arcturus. If you're up to it, Captain, we're meeting in the Mercantile's spaceport office in fifteen minutes."`
+			`	With that, he lifts his very expensive-looking hat, turns on his heel, and walks away.`
+		payment 6500
