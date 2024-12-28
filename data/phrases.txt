@@ -1,0 +1,4 @@
+phrase "friendly fw pirate"
+	phrase
+		"friendly free worlds" 2
+		"friendly pirate"
