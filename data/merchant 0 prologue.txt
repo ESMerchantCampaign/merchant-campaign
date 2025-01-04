@@ -12,10 +12,28 @@ mission "RMP: Collective Bargaining 1"
 		system "Markab" 
 	to offer
 #		has "name of actual intro mission: declined"
-		has "rm: pacifist"
+		has "rm: interested in pacifist"
 	on offer
 		conversation
-			"You walk into the busy spaceport bar of <origin> as instructed by the man who met you when you landed. One of the more wealthy customers catches your eye and beckons you over to his table. "Hello there, <first>!""
+			`You walk into the busy spaceport bar of <origin> as instructed by the man who met you when you landed. One of the more wealthy customers catches your eye and beckons you over to his table. As you walk in that direction, you notice a blue pin on his vest with the label "Jacob Schmidt, CTO"` # CTO stands for "Chief Trading Officer"
+			`	The man stands as you approach. "Hello, <first>! I heard you were interested in joining us, but didn't like fighting. Is that correct?"`
+			choice
+				`	"Yes."`
+					goto joinpacifist
+				`	"What makes you think that? Who doesn't like war? At any rate, the answer is no."`
+			action
+				clear "salary: Republic Mercantile"
+			`	"Ah. I see my information is incorrect. In that case, I am afraid that I cannot recruit you. Goodbye." He takes a note, stands, and leaves; you notice the short bartender looking at you with a strange expression and a slight tinge of hostility.`
+			choice
+				`	"Why are you looking at me like that?"`
+				`	(Attempt to exit.)`
+			`	The plump barkeep heads in your direction and stands in between you and the door. "Do you know what you have done?" Without waiting for an answer, he continues. "That guy is one of the most important people on this planet. Why would you turn away from a job offer with such affluence involved? I hear that Republic Mercantile is an influence galaxy-wide." With that, the proprietor goes back to his desk, leaving you perplexed.`
+				decline
+			label joinpacifist
+			action
+				set "rm: pacifist"
+			`	"My department, in charge of the main trade routes we of Republic Mercantile use, has recently noticed a half-takeover by the Syndicate in lanes going east. I need to consult with the leaders on <planet>; the officials of my organization would not like to see our monopoly disappear." He winks. "At any rate, your first mission is transporting me. Let's get going."`
+				accept
 
 # Miscellaneous Intro
 
