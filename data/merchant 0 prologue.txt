@@ -1,0 +1,22 @@
+# Actual Intro Mission
+
+# Pacifist Intro
+
+mission "RMP: Collective Bargaining 1"
+	name "Collective Bargaining"
+	description "Take Jacob Schmidt, the CTO of Republic Mercantile, to <destination> to bargain with the Syndicate."
+	deadline
+	source "New China"
+	destination
+		government "Syndicate"
+		system "Markab" 
+	to offer
+#		has "name of actual intro mission: declined"
+		has "rm: pacifist"
+	on offer
+		conversation
+			"You walk into the busy spaceport bar of <origin> as instructed by the man who met you when you landed. One of the more wealthy customers catches your eye and beckons you over to his table. "Hello there, <first>!""
+
+# Miscellaneous Intro
+
+# Mercenary Intro
