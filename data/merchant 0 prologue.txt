@@ -3,13 +3,11 @@
 # Pacifist Intro
 
 mission "RMP: Collective Bargaining 1"
-	name "Collective Bargaining"
-	description "Take Jacob Schmidt, the CTO of Republic Mercantile, to <destination> to bargain with the Syndicate."
+	name "Trade Route Bargaining"
+	description "Take Jacob Schmidt, the CTO of Republic Mercantile, to <destination>. The Syndicate has been taking over trade routes northeast of <origin>, and needs to be bargained with."
 	deadline
 	source "New China"
-	destination
-		government "Syndicate"
-		system "Markab" 
+	destination "Hephaestus"
 	to offer
 #		has "name of actual intro mission: declined"
 		has "rm: interested in pacifist"
@@ -32,7 +30,32 @@ mission "RMP: Collective Bargaining 1"
 			label joinpacifist
 			action
 				set "rm: pacifist"
-			`	"My department, in charge of the main trade routes we of Republic Mercantile use, has recently noticed a half-takeover by the Syndicate in lanes going east. I need to consult with the leaders on <planet>; the officials of my organization would not like to see our monopoly disappear." He winks. "At any rate, your first mission is transporting me. Let's get going."`
+			`	"My department, in charge of the main trade routes we of Republic Mercantile use, has recently noticed a half-takeover by some other company, presumably the Syndicate, in lanes going north. I need to consult with the leaders on <planet>; the officials of my organization would not like to see our monopoly disappear." He winks. "At any rate, your first mission is transporting me. Let's get going."`
+				accept
+	on enter Markab
+		dialog "Jacob radios ahead to tell the officials on Markab about the intended visit."
+
+mission "RMP: Collective Bargaining 2"
+	name "Trade Route Bargaining"
+	description "Head to <destination> and bargain with leaders of a new company the Syndicate mentioned as another Mercantile."
+	source "Hephaestus"
+	destination "Glory" # Headquarters of ATS, should be updated if that is.
+	deadline
+	landing
+	to offer
+		has "RMP: Collective Bargaining 1: done"
+	on offer
+		conversation
+			`A Syndicate guard greets you and your passenger as <ship> lands. "Good morning, Mr. Schmidt. Your ride is just this way." "One moment," Jacob says, and turns to you. "Would you like to come with me for some bureaucratic paperwork? I assure you that most spaceship captains do not find this interesting, but if you end up joining us it might be worth it."`
+			choice
+				`	"I'm up for anything."`
+				`	"Nah. Count me out."`
+					goto shipwait
+			`	The Syndicate guards lead the Republic Mercantile's delegation toward a sleek limosine the same color as Markab's star. "This should suit you nicely, Mr. Schmidt. It is only a short drive to the office." After a few minutes of speeding through the wide streets of <origin>, passing buildings under construction on the way, the red vehicle screeches to a halt in front of an imposing grey building.`
+			`	`
+				accept
+			label shipwait
+			`	After about an hour, Jacob Schmidt returns with a strange expression on his face. "They say they haven't been doing anything, but recommended a different startup on <destination>. Why don't you take me there; I have a meeting scheduled on <date>.`
 				accept
 
 # Miscellaneous Intro
