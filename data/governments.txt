@@ -15,8 +15,7 @@ government "Bounty (FW Disguised)"
 	"hostile hail" "hostile pirate"
 	"hostile disabled hail" "hostile disabled pirate"
 
-government "Republic Mercantile (Escort)"
-	"display name" "Republic Mercantile"
+government "Mercantile Security"
 	swizzle 13
 	"player reputation" 1
 	"attitude toward"

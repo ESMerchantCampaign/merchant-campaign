@@ -116,6 +116,20 @@ mission "False Foe 1"
 	on fail
 		dialog `You have failed an essential Republic Mercantile mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 
+ship "Hawk" "Hawk (Gatling)"
+	outfits
+		"Gatling Gun" 2
+		"Bullet Boxes" 2
+		"Gatling Gun Ammo" 9000
+		"nGVF-CC Fuel Cell"
+		"KP-6 Photovoltaic Panel"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Capybara Reverse Thruster"
+		"Hyperdrive"
+
 mission "False Foe 2A"
 	name "Escort to <planet>"
 	description "After being attacked by pirates on the way to Hopper, Captains Rodgers and Haight have enlisted your help as an escort back to New China, via a stopover on <destination>."
@@ -136,7 +150,7 @@ mission "False Foe 2A"
 		personality nemesis staying harvests plunders
 			confusion 10
 		system destination
-		ship "Hawk (Plasma)" "F.S. Wormwood"
+		ship "Hawk (Gatling)" "F.S. Wormwood"
 
 	on offer
 		conversation
@@ -216,3 +230,105 @@ mission "False Foe 2B"
 			`	"Anyways, the long and short of it is, we'd like to talk with you about that disguised pirate you ran into in Arcturus. If you're up to it, Captain, we're meeting in the Mercantile's spaceport office in fifteen minutes."`
 			`	With that, he lifts his very expensive-looking hat, turns on his heel, and walks away.`
 		payment 6500
+
+mission "False Foe 3"
+	name "Dirt Belt Patrol"
+	description "Republic Mercantile Security has hired you to lead a patrol through <waypoints>. Destroy any pirates you find, then return to <destination> to see if there is any further information."
+	source "New China"
+	waypoint "Vindemiatrix"
+	waypoint "Wei"
+	waypoint "Alnasl"
+	waypoint "Eber"
+	waypoint "Alpha Arae"
+	waypoint "Cebalrai"
+	to offer
+		has "False Foe 2B: done"
+
+	npc
+		government "Mercantile Security"
+		personality heroic opportunistic launching escort
+			confusion 20
+		ship "Headhunter" "Opportunist"
+		ship "Scout" "Long Arm of the Lawn"
+
+	npc kill
+		government "Pirate"
+		personality staying harvests plunders target
+			confusion 30
+		system "Eber"
+		fleet "Small Southern Pirates" 2
+
+	on offer
+		conversation
+			`Arriving at the Republic Mercantile spaceport office, you are met by Cook, Haight, and a pair of young starship captains wearing leather jackets with the words "Mercantile Security" emblazoned on them. Cook motions you toward an empty seat.`
+			choice
+				`	(Sit down.)`
+				`	(Remain standing.)`
+			`	"Well then," Cook addresses the group, "now that everyone's here we may as well crack on with it. Athena, the floor is yours."`
+			`	Captain Haight stands up, brandishing a 5D memory crystal. "Thank you. Now, as you may know, I've just returned from an intelligence-gathering operation in the Dirt Belt. Unfortunately, I can confirm that there are indeed disguised pirates running rampant in the region. Captain <last> and I encountered one such pirate in Arcturus."`
+			`	One of the Security captains interrupts. "How do we know the pirate was disguised? What if the Free Worlds really are engaged in piracy?"`
+			`	Haight glowers at the captain. "First of all, this ship mounted two Gatling guns. The Free Worlds do not have any Gatling guns in their arsenal that we are aware of. On top of that, I was able to intercept some of the Hawk's communications using the Winded Dragon's spy suite. According to the lab, the signals were encoded using the same system that the Parliamentary Guard was using to discuss VIP moves during the bombings of Geminus and Martini - a system that costs approximately two million credits a minute to operate, and has yet to be seen be used anywhere else. There is no sign that the Free Worlds even has such encryption technology, and they certainly wouldn't use it to communicate with a lone interceptor in the middle of nowhere. No, this is definitely one of the ships we've been looking for."`
+			choice
+				`	"One of? There's more of those ships?"`
+				`	"You mean the Winded Dragon wasn't carrying the supplies you said you were carrying?"`
+					goto liar
+				`	"Where are these pirates coming from?"`
+					goto where
+			`	"Yes, there's more of those ships," Haight acknowledges. "We've had eight sightings now, including our encounter, and we figure there must be at least three such ships. All interceptors armed with Gatling guns and painted green, none of which acted like the Free Worlds. We don't know where they're coming from, but it sure doesn't seem to be the Free Worlds. We've had reports of their activity as far north as Delta Velorum."`
+				goto "dirt belt"
+		
+			label liar
+			`	"No," Haight responds brusquely. "We did mislead you, and the Winded Dragon is more of a sophisticated scanner platform than a long-haul freighter. But it's still a freighter, and we really were carrying mining equipment and nuclear fuel."`
+			`	The Security captain speaks up again. "How many of these ships did you say there were again?"`
+			`	Haight's response is immediate. "We've had eight sightings now, including this last encounter, and we figure there must be at least three such ships. All interceptors armed with Gatling guns and painted green, none of which acted like the Free Worlds. We don't know where they're coming from, but it sure doesn't seem to be the Free Worlds. We've had reports of their activity as far north as Delta Velorum."`
+				goto "dirt belt"
+
+			label where
+			`	"Honestly, we don't know. We've had eight sightings, mostly spread across the middle of the Dirt Belt, but we have no idea what planet they're using as a base. We even had one sighting near Delta Velorum, and that could be their base for all we know."`
+
+			label "dirt belt"
+			`	"But that was an isolated occurence, no?" asks the other Security captain.`
+			`	"Yes, it was. Most likely, they're based in Delta Sagittarii or Rastaban or one of the other systems in that region. And that's why you're here."`
+			`	"Yes, we want you three captains to lead a patrol of the region," Cook interjects smoothly, ignoring the glower that Haight shoots his direction. "Captain <last>, since you've had some contact with these people before, we'd like you to lead the patrol. Does that work for you?"`
+			choice
+				`	"Sure."`
+					goto casual
+				`	"Yes, sir."`
+					goto casual
+				`	"Why can't the Navy lead the patrol?"`
+					goto navy
+				`	"Sorry, but I'm needed elsewhere. You'll have to find someone else to lead the patrol."`
+
+			label reject
+			`	Cook seems disappointed, but hides it well. "Very well, then. If you ever want to work with the Republic Mercantile again, you know where to find us. Gospeed."`
+			`	By the time you leave the room, Haight appears to have talked Cook into letting her lead the patrol.`
+				decline
+			
+			label navy
+			`	"To be frank, the Navy has better things to do with its time than fly around empty systems looking for pirates. Not to mention that, if they found such a pirate, a malicious agent could simply record the battle between the Navy ship and the imposter. A video wouldn't hold up as evidence in court, of course, but it could easily sway public opinion in the Free Worlds and bring about a more open war."`
+			`	"Needless to say, the Militia isn't going to get involved either, because those systems are technically in Republic space and any action could be considered an act of war. Perhaps if you can nail a few more of the brigands and get some solid proof we'll be able to bring the Navy and Militia in, but not until then."`
+			choice
+				`	"In that case, I'm honored to lead the patrol."`
+				`	"Sorry, but I'm needed elsewhere. You'll have to find someone else to fill the Navy's shoes."`
+				goto reject
+			
+			label casual
+			`	"Glad to hear it! I'm sure those two will be ready before you are," he says nodding at the two Security captains who are already halfway out the door, "but don't forget that you're in charge. I want a survey report of <waypoints> on my desk as soon as possible. If you see any pirates lurking in any of the systems, take them out, even if they're not dressed up like the Free Worlds, but don't worry about hunting down any pirates that are just passing through."`
+			`	As you turn to leave, Cook taps you on the shoulder. "Oh, and one more thing. Since it looks like we're all going to be working together here, we might as well be on first-name terms. Call me Drake."`
+			`	"<first>," you reply.`
+			`	Drake tips his hat and ushers you out of the offices and towards your waiting patrol fleet.`
+				accept
+
+		on enter "Eber"
+			conversation
+				`As soon as you enter Eber, you notice a small fleet of pirates, apparently lying in wait to ambush merchant traffic. While none of them is liveried in Free Worlds green, they don't appear to be going anywhere and you have your orders.`
+
+		on complete
+			conversation
+				`As soon as you land on <planet>, Drake and Athena appear to receive your scanner logs and debrief you. You hand over your report and describe your encounter with the pirates in Eber. Drake thanks you impatiently.`
+				`	"Sorry for being brash," Drake says, breathing easily. "We've just had another sighting. More than a sighting, actually. Two of the ships came out of nowhere and decimated one of our convoys, and we're all under a lot of pressure now. Say, would you be willing to meet in the Mercantile spaceport office again in an hour or so, once I've had the chance to look over your report."`
+				`	Without waiting for a reply, he hurries away, and Athena passes you a credit chip worth <payment> before heading over to debrief the Security captains.`
+			payment 75000
+
+		on waypoint
+			dialog "You have landed on <planet>, but either you have not visited all your waypoints or else you failed to eliminate a pirate fleet."
