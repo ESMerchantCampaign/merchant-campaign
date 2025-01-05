@@ -14,14 +14,14 @@ mission "RMP: Collective Bargaining 1"
 	on offer
 		conversation
 			`You walk into the busy spaceport bar of <origin> as instructed by the man who met you when you landed. One of the more wealthy customers catches your eye and beckons you over to his table. As you walk in that direction, you notice a blue pin on his vest with the label "Jacob Schmidt, CTO"` # CTO stands for "Chief Trading Officer"
-			`	The man stands as you approach. "Hello, <first>! I heard you were interested in joining us, but didn't like fighting. Is that correct?"`
+			`	Jacob stands as you approach. "Hello, <first>! I heard you were interested in joining us, but didn't like fighting. Is that correct?"`
 			choice
 				`	"Yes."`
 					goto joinpacifist
 				`	"What makes you think that? Who doesn't like war? At any rate, the answer is no."`
 			action
 				clear "salary: Republic Mercantile"
-			`	"Ah. I see my information is incorrect. In that case, I am afraid that I cannot recruit you. Goodbye." He takes a note, stands, and leaves; you notice the short bartender looking at you with a strange expression and a slight tinge of hostility.`
+			`	"Ah. I see my information is incorrect. In that case, I am afraid that I cannot recruit you. Goodbye." The tall man takes a note, stands, and leaves; you notice the short bartender looking at you with a strange expression and a slight tinge of hostility.`
 			choice
 				`	"Why are you looking at me like that?"`
 				`	(Attempt to exit.)`
@@ -52,10 +52,20 @@ mission "RMP: Collective Bargaining 2"
 				`	"Nah. Count me out."`
 					goto shipwait
 			`	The Syndicate guards lead the Republic Mercantile's delegation toward a sleek limosine the same color as Markab's star. "This should suit you nicely, Mr. Schmidt. It is only a short drive to the office." After a few minutes of speeding through the wide streets of <origin>, passing buildings under construction on the way, the red vehicle screeches to a halt in front of an imposing grey building.`
-			`	`
+			`	The guard leads you up the wide steps to a large metal door, taps in a security code, and opens it. "Welcome to Syndicated Trade's headquarters, Mr. Schmidt and Captain <last>. Here we collaborate with merchants from the entirety of human space and command the great trade routes of our corporation. Please take the second elevator from the left up to floor thirty-three; the office you are looking for is number thirty-three hundred and four. Good day."`
+			`	Following the guard's instructions brings you to a palatial office that must be at least a hundred meters in every direction. At the far end a tall man sits at a large desk; the only other visible item in the room is a huge grandfather clock. There are no windows.`
+			choice
+				`	"What is this place?"`
+				`	(Remain silent.)`
+			`	"Welcome, welcome! Allow me to introduce myself. I am James Aden, HCTO of the Syndicate. Would you remind you of your names? I meet too many people each day..." "<first> <last>," you say, and Jacob introduces himself as well, continuing with "We have come to request that you desist from your commandeering of our Mercantile's trade routes." He pauses. "How about a deal. You control all routes in the Deep and here, but we will take priority in all systems of the august Republic."`
+			`	The HCTO blinks. "But my dear Jacob," he says ingratiatingly, "We have done nothing of the kind. Not a single ship of our fleet has interfered in any way with your company, unless you were masquerading as pirates. That's not so likely, is it? And besides, what would we gain? Enmity? No." "Well, than, what-" Jacob sputters before being interrupted. "Do know, however, that a startup your mercantile is unlikely to have heard of is begun, named ATS, headquartered on <destination>. That is where you are most likely to find answers."`
+			choice
+				`	"And how do you know of this?"`
+				`	"Sounds very likely to be true."`
+			`	"They had a big publicity campaign hereabouts, though we soon told them their efforts were unappreciated. At any rate, a meeting with a very important person is scheduled in two minutes. I would thank you if you could leave." Jacob glares at the man, but exits the room, pulling you after him. "Let us go to <planet>, <first>. I have a feeling that Mr. Aden was telling nothing but lies; however, it can not hurt to find out. Please take us fast while look them up. If they do exist, I will schedule a meeting on <date>."`
 				accept
 			label shipwait
-			`	After about an hour, Jacob Schmidt returns with a strange expression on his face. "They say they haven't been doing anything, but recommended a different startup on <destination>. Why don't you take me there; I have a meeting scheduled on <date>.`
+			`	After about an hour, Jacob Schmidt returns with a strange expression on his face. "They say they haven't been doing anything, but recommended a different startup called ATS on <destination>. Why don't you take me there; I scheduled a meeting on <date>.`
 				accept
 
 # Miscellaneous Intro
