@@ -36,12 +36,12 @@ mission "RMP: Collective Bargaining 1"
 		dialog "Jacob radios ahead to tell the officials on Markab about the intended visit."
 
 mission "RMP: Collective Bargaining 2"
+	landing
 	name "Trade Route Bargaining"
 	description "Head to <destination> and bargain with leaders of a new company the Syndicate mentioned as another Mercantile."
 	source "Hephaestus"
-	destination "Glory" # Headquarters of ATS, should be updated if that is.
+	destination "Glory"
 	deadline
-	landing
 	to offer
 		has "RMP: Collective Bargaining 1: done"
 	on offer
@@ -58,15 +58,46 @@ mission "RMP: Collective Bargaining 2"
 				`	"What is this place?"`
 				`	(Remain silent.)`
 			`	"Welcome, welcome! Allow me to introduce myself. I am James Aden, HCTO of the Syndicate. Would you remind you of your names? I meet too many people each day..." "<first> <last>," you say, and Jacob introduces himself as well, continuing with "We have come to request that you desist from your commandeering of our Mercantile's trade routes." He pauses. "How about a deal. You control all routes in the Deep and here, but we will take priority in all systems of the august Republic."`
-			`	The HCTO blinks. "But my dear Jacob," he says ingratiatingly, "We have done nothing of the kind. Not a single ship of our fleet has interfered in any way with your company, unless you were masquerading as pirates. That's not so likely, is it? And besides, what would we gain? Enmity? No." "Well, than, what-" Jacob sputters before being interrupted. "Do know, however, that a startup your mercantile is unlikely to have heard of is begun, named ATS, headquartered on <destination>. That is where you are most likely to find answers."`
+			`	The HCTO blinks. "But my dear Jacob," he says ingratiatingly, "We have done nothing of the kind. Not a single ship of our fleet has interfered in any way with your company, unless you were masquerading as pirates. That's not so likely, is it? And besides, what would we gain? Enmity? No." "Well, than, what-" Jacob sputters before being interrupted. "Do know, however, that a startup your mercantile is unlikely to have heard of is begun, named Alphabet Transport Solutions (or ATS), headquartered on <destination>. That is where you are most likely to find answers."`
 			choice
 				`	"And how do you know of this?"`
 				`	"Sounds very likely to be true."`
 			`	"They had a big publicity campaign hereabouts, though we soon told them their efforts were unappreciated. At any rate, a meeting with a very important person is scheduled in two minutes. I would thank you if you could leave." Jacob glares at the man, but exits the room, pulling you after him. "Let us go to <planet>, <first>. I have a feeling that Mr. Aden was telling nothing but lies; however, it can not hurt to find out. Please take us fast while look them up. If they do exist, I will schedule a meeting on <date>."`
 				accept
 			label shipwait
-			`	After about an hour, Jacob Schmidt returns with a strange expression on his face. "They say they haven't been doing anything, but recommended a different startup called ATS on <destination>. Why don't you take me there; I scheduled a meeting on <date>.`
+			`	After about an hour, Jacob Schmidt returns with a strange expression on his face. "They say they haven't been doing anything, but recommended a different startup called ATS, or Alphabet Transport Solutions, on <destination>. Why don't you take me there; I scheduled a meeting on <date>."`
 				accept
+
+mission "RMP: Collective Bargaining 3"
+	landing
+	name "Jacob to <planet>"
+	description "After the failure in negotiations with ATS, take Jacob Schmidt back to <destination> and receive your next assignment."
+	source "Glory"
+	destination "New China"
+	npc
+		government "Pirate"
+		system destination
+		personality
+			confusion 30
+			staying
+		fleet "Small Southern Pirates" 2
+	npc
+		government "Mercantile Security"
+		system destination
+		planet "New China"
+		personality
+			confusion 22
+			launching
+			staying
+		ship "Bastion (Heavy)" "Captain Cook"
+		ship "Marauder Raven" "Titanium Dagger"
+	to offer
+		has "RMP: Collective Bargaining 2: done"
+	on offer
+		conversation
+			``
+			`	`
+			`	`
 
 # Miscellaneous Intro
 
