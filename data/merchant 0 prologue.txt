@@ -6,7 +6,7 @@ mission "RMP: Collective Bargaining 1"
 	name "Trade Route Bargaining"
 	description "Take Jacob Schmidt, the CTO of Republic Mercantile, to <destination>. The Syndicate has been taking over trade routes northeast of <origin>, and needs to be bargained with."
 	deadline
-	source "New China"
+	source "Kunlun"
 	destination "Hephaestus"
 	to offer
 #		has "name of actual intro mission: declined"
@@ -73,7 +73,7 @@ mission "RMP: Collective Bargaining 3"
 	name "Jacob to <planet>"
 	description "After the failure in negotiations with ATS, take Jacob Schmidt back to <destination> and receive your next assignment."
 	source "Glory"
-	destination "New China"
+	destination "Kunlun"
 	npc
 		government "Pirate"
 		system destination
@@ -83,8 +83,8 @@ mission "RMP: Collective Bargaining 3"
 		fleet "Small Southern Pirates" 2
 	npc
 		government "Mercantile Security"
-		system destination
-		planet "New China"
+		system "Merak"
+		planet "Kunlun"
 		personality
 			confusion 22
 			launching
