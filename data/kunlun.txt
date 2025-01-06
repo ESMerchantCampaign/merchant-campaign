@@ -1,0 +1,26 @@
+planet "New China"
+	add attributes "requires: inaccessible"
+
+planet "Kunlun"
+	attributes "near earth" "republic mercantile" "republic mercantile headquarters" urban
+	landscape land/city22
+	description `In the very early days of hyperspace travel, most settlers chose to put down roots within a few jumps of Earth, because until more fuel depots were built, colonies farther out would seldom be visited by cargo ships. As a result, a lot of effort was put into terraforming and developing worlds that would have been passed over by most colonists today.`
+	description `	Kunlun is one such world, and it is now overpopulated, and poor enough that maintaining the terraforming equipment and climate requires almost a third of the planetary government's tax income.`
+	description `	Kunlun is also the headquarters of Republic Mercantile, a union of merchants operating in the Near Earth region.`
+	spaceport `The "new port" here was built several centuries ago, when the grand but impractical spaceport built by the original settlers had deteriorated to the point where it was no longer usable. This port is much simpler by comparison: just a ring of landing pads of various sizes around a large central building with ten levels of warehouse space accessible by freight elevator.`
+	spaceport `	There are always locals hanging around the port, some of them mere children, who are trying to find a cheap ride off-planet.`
+	spaceport `	The warehouses for Republic Mercantile take up one large corner, and the traffic of employees is spread throughout the city.`
+	outfitter "Common Outfits"
+	outfitter "Lovelace Basics"
+	outfitter "Syndicate Basics"
+	outfitter "Ammo South"
+	security 0.1
+	tribute 1400
+		threshold 4000
+		fleet "Small Republic" 50
+
+system "Merak"
+	add object "Kunlun"
+		sprite planet/forest4-b
+		distance 1107.51
+		period 441.513
