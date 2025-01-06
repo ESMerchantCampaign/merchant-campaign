@@ -22,11 +22,11 @@ mission "Republic Mercantile Wholesale Small [0]"
 	repeat
 	to offer
 		has "event: war begins"
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		random < 50
 	source
 		near Merak 3 10
-	destination "New China"
+	destination "Kunlun"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -45,11 +45,11 @@ mission "Republic Mercantile Wholesale Small [1]"
 	repeat
 	to offer
 		has "event: war begins"
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		random < 40
 	source
 		near Merak 5 15
-	destination "New China"
+	destination "Kunlun"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -68,12 +68,12 @@ mission "Republic Mercantile Wholesale Large [0]"
 	repeat
 	to offer
 		has "event: war begins"
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		random < 40
 		"cargo space" >= 100
 	source
 		near Merak 3 10
-	destination "New China"
+	destination "Kunlun"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -92,12 +92,12 @@ mission "Republic Mercantile Wholesale Large [1]"
 	repeat
 	to offer
 		has "event: war begins"
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		random < 30
 		"cargo space" >= 100
 	source
 		near Merak 5 15
-	destination "New China"
+	destination "Kunlun"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
@@ -116,14 +116,14 @@ mission "Republic Mercantile Martini Relief (Reconstruction)"
 	cargo Construction 10 3 .2
 	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> for the reconstruction efforts, they give you clearance to land."
 	to offer
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		has "event: war begins"
 		not "event: initial deployment 2"
 		not "flagship planet: Martini"
 		random < 45
 	source
 		near Merak 2 5
-	stopover "New China"
+	stopover "Kunlun"
 	destination "Martini"
 	on stopover
 		dialog phrase "generic cargo pickup"
@@ -143,14 +143,14 @@ mission "Republic Mercantile Martini Relief (Medical)"
 	cargo Medical 10 3 .2
 	clearance "When you explain to the spaceport controller that you are carrying a vital supply of <commodity> to help treat the wounded, they give you clearance to land."
 	to offer
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		has "event: war begins"
 		not "event: initial deployment 2"
 		not "flagship planet: Martini"
 		random < 40
 	source
 		near Merak 2 5
-	stopover "New China"
+	stopover "Kunlun"
 	destination "Martini"
 	on stopover
 		dialog phrase "generic cargo pickup"
@@ -170,14 +170,14 @@ mission "Republic Mercantile Martini Relief (People) [0]"
 	passengers 2 2 .3
 	clearance "When you explain to the spaceport controller that you have a group of volunteers for Martini's disaster relief efforts on board, they give you clearance to land."
 	to offer
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		has "event: war begins"
 		not "event: initial deployment 2"
 		not "flagship planet: Martini"
 		random < 25
 	source
 		near Merak 2 5
-	stopover "New China"
+	stopover "Kunlun"
 	destination "Martini"
 	on stopover
 		dialog phrase "generic passenger pickup"
@@ -198,14 +198,14 @@ mission "Republic Mercantile Martini Relief (People) [1]"
 	passengers 2 2 .3
 	clearance "When you explain to the spaceport controller that you have a group of volunteers for Martini's disaster relief efforts on board, they give you clearance to land."
 	to offer
-		has "landing access: New China"
+		has "landing access: Kunlun"
 		has "event: war begins"
 		not "event: initial deployment 2"
 		not "flagship planet: Martini"
 		random < 25
 	source
 		near Merak 2 5
-	stopover "New China"
+	stopover "Kunlun"
 	destination "Martini"
 	on stopover
 		dialog phrase "generic passenger pickup"
@@ -414,7 +414,7 @@ mission "Republic Mercantile Free Worlds Smuggling"
 	name "Smuggling to <planet>" # May need a better/shorter name.
 	description "Smuggle <tons> of repackaged <cargo> to <destination>. You will be flying in Free Worlds space, which is currently hostile to the Republic, so you may be fined with an amount that should not be greater then <fine>."
 	cargo "Food" 10 2 .08
-	source "New China"
+	source "Kunlun"
 	destination
 		government "Free Worlds"
 		near "Izar" 1 6
@@ -442,7 +442,7 @@ mission "Republic Mercantile Syndicate Smuggling"
 	name "Smuggling to <planet>" # May need a better/shorter name.
 	description "Smuggle <tons> of repackaged <cargo> to <destination>. You will be flying in Syndicate space, which is currently hostile to the Republic because of Sol's occupation, so you may be fined with an amount that should not be greater then <fine>."
 	cargo random 10 2 .08
-	source "New China"
+	source "Kunlun"
 	destination
 		government "Syndicate"
 		near "Markab" 1 10
@@ -471,7 +471,7 @@ mission "Republic Mercantile Merchant Rescue [0]"
 	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
 	source
 		near "Merak" 0 4
-	destination "New China"
+	destination "Kunlun"
 	# There should be a random waypoint and merchant location when #10468 happens.
 	to offer
 		or
@@ -528,7 +528,7 @@ mission "Republic Mercantile Merchant Rescue [1]"
 	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
 	source
 		near "Merak" 0 4
-	destination "New China"
+	destination "Kunlun"
 	# There should be a random waypoint and merchant location when #10468 happens.
 	to offer
 		or
@@ -585,7 +585,7 @@ mission "Republic Mercantile Merchant Rescue [2]"
 	description "Find and repair a disabled merchant named the <npc>, which is within three systems of <origin>. After repairing, escort them to <planet>, where you will be paid <payment>. Destroying pirates in that system will pay you extra."
 	source
 		near "Merak" 0 4
-	destination "New China"
+	destination "Kunlun"
 	# There should be a random waypoint and merchant location when #10468 happens.
 	to offer
 		or
