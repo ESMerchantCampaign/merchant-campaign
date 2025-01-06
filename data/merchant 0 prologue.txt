@@ -6,7 +6,7 @@ mission "RMP: Collective Bargaining 1"
 	name "Trade Route Bargaining"
 	description "Take Jacob Schmidt, the CTO of Republic Mercantile, to <destination>. The Syndicate has been taking over trade routes northeast of <origin>, and needs to be bargained with."
 	deadline
-	source "Kunlun"
+	source "New China"
 	destination "Hephaestus"
 	to offer
 #		has "name of actual intro mission: declined"
@@ -73,7 +73,7 @@ mission "RMP: Collective Bargaining 3"
 	name "Jacob to <planet>"
 	description "After the failure in negotiations with ATS, take Jacob Schmidt back to <destination> and receive your next assignment."
 	source "Glory"
-	destination "Kunlun"
+	destination "New China"
 	npc
 		government "Pirate"
 		system destination
@@ -84,7 +84,7 @@ mission "RMP: Collective Bargaining 3"
 	npc
 		government "Mercantile Security"
 		system "Merak"
-		planet "Kunlun"
+		planet "New China"
 		personality
 			confusion 22
 			launching
@@ -95,9 +95,19 @@ mission "RMP: Collective Bargaining 3"
 		has "RMP: Collective Bargaining 2: done"
 	on offer
 		conversation
-			``
-			`	`
-			`	`
+			`As <ship> touches down on <origin> with a gentle bump, it is surrounded by a threatening division of guards in "ATS" uniforms. "What is going on?" Jacob asks.`
+				to display
+					or
+						"flagship crew" < 51
+						"total ships" < 6
+			`As <ship> touches down on <origin> with a gentle bump, it is surrounded by a division of guards in "ATS" uniforms. "What is going on?" Jacob asks.`
+				to display
+					or
+						"flagship crew" > 50
+						"total ships" > 5
+			`	A stocky woman steps out of the crowd. "Well, what are you doing here? <origin> isn't controlled by your silly mercantile, and not by the Syndicate either. You are trespassing on land not your own; I assume you know that?" Jacob evenly replies, "Who gave your company this planet? It is not yours."`
+			`	The woman's demeanor changes; she seems almost friendly now. "Well, why don't you come into the office? There is a rainstorm scheduled in a few minutes." "Thank you, but no. Captain <first> and I have other business." Aside to you, he says, "I do not trust Daniella Dalga. It is a widely-known fact that she used to be a pirate before some startup mysteriously hired her. That company is probably Alphabet Transport Solutions. Let's go back to <planet> so I can talk this over with other executives."`
+				accept
 
 # Miscellaneous Intro
 
