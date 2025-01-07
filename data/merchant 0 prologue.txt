@@ -79,8 +79,14 @@ mission "RMP: Collective Bargaining 3"
 		system destination
 		personality
 			confusion 30
+			disables
 			staying
-		fleet "Small Southern Pirates" 2
+		fleet
+			names "pirate"
+			variant
+				"Beserker"
+				"Hawk" 2
+				"Scout"
 	npc
 		government "Mercantile Security"
 		system "Merak"
@@ -106,8 +112,49 @@ mission "RMP: Collective Bargaining 3"
 						"flagship crew" > 50
 						"total ships" > 5
 			`	A stocky woman steps out of the crowd. "Well, what are you doing here? <origin> isn't controlled by your silly mercantile, and not by the Syndicate either. You are trespassing on land not your own; I assume you know that?" Jacob evenly replies, "Who gave your company this planet? It is not yours."`
-			`	The woman's demeanor changes; she seems almost friendly now. "Well, why don't you come into the office? There is a rainstorm scheduled in a few minutes." "Thank you, but no. Captain <first> and I have other business." Aside to you, he says, "I do not trust Daniella Dalga. It is a widely-known fact that she used to be a pirate before some startup mysteriously hired her. That company is probably Alphabet Transport Solutions. Let's go back to <planet> so I can talk this over with other executives."`
+			`	The woman's demeanor changes; she seems almost friendly now. "Well, why don't you come into the famous Daniella's office? There is a rainstorm scheduled in a few minutes." "Thank you, but no. Captain <first> and I have other business." Aside to you, he says, "I do not trust this Daniella Dalga. It is a widely-known fact that she used to be a pirate before some startup mysteriously hired her. That company is probably Alphabet Transport Solutions. Let's go back to <planet> so I can talk this over with other executives."`
 				accept
+	on complete
+		dialog "Jacob gets off your ship and heads to his meeting after telling you to meet him in the spaceport at 13:40."
+
+mission "RMP: Mars Relief"
+	name "Convoy to <planet>"
+	description "<planet> is experiencing a severe food shortage, and the Republic Mercantile has agreed to help relieve the emergency. Immediately transport <cargo> to <planet>."
+	npc accompany save
+		government "Merchant"
+		personality
+			confusion 30
+			launching
+		fleet
+			names "merchant"
+			variant
+				"Bulk Freighter" 2
+				"Hauler"
+				"Hauler II" 2
+				"Hauler III"
+	npc
+		government "Mercantile Security"
+		personality
+			confusion 20
+			launching
+		ship "Marauder Raven" "Titanium Dagger"
+		ship "Bastion (Heavy)" "Captain Cook"
+		ship "Splinter (Laser)" "J.S. Wright"
+	npc
+		government "Pirate"
+		personality
+			confusion 24
+		ship "Headhunter" "Kraken"
+		ship "Hawk" "Tentacle"
+		ship "Hawk" "Animosity"
+	npc
+		government "Alphabet Transport Solutions"
+		personality staying
+		system "Sol"
+		ship "Hauler II" "ATS Hauler"
+		ship "Container Transport" "Ship"
+		ship "Freighter" "Imaginative Name"
+
 
 # Miscellaneous Intro
 
