@@ -1,3 +1,14 @@
+government "Alphabet Transport Solutions"
+	"display name" "ATS"
+	swizzle 5
+	"player reputation" 0
+	"bribe" .12
+	"fine" 0
+	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
+	"hostile hail" "hostile civilian"
+	"hostile disabled hail" "hostile disabled"
+
 government "Bounty (FW Disguised)"
 	"display name" "Free Worlds"
 	swizzle 2
@@ -15,8 +26,7 @@ government "Bounty (FW Disguised)"
 	"hostile hail" "hostile pirate"
 	"hostile disabled hail" "hostile disabled pirate"
 
-government "Republic Mercantile (Escort)"
-	"display name" "Republic Mercantile"
+government "Mercantile Security"
 	swizzle 13
 	"player reputation" 1
 	"attitude toward"
