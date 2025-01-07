@@ -119,7 +119,9 @@ mission "RMP: Collective Bargaining 3"
 
 mission "RMP: Mars Relief"
 	name "Convoy to <planet>"
-	description "<planet> is experiencing a severe food shortage, and the Republic Mercantile has agreed to help relieve the emergency. Immediately transport <cargo> to <planet>."
+	description "<planet> is experiencing a severe food shortage, and the Republic Mercantile has agreed to help relieve the emergency. Immediately transport <cargo> to <planet>, along with a large convoy of others doing the same."
+	deadline
+	cargo "food" 30
 	npc accompany save
 		government "Merchant"
 		personality
@@ -151,10 +153,24 @@ mission "RMP: Mars Relief"
 		government "Alphabet Transport Solutions"
 		personality staying
 		system "Sol"
-		ship "Hauler II" "ATS Hauler"
-		ship "Container Transport" "Ship"
+		ship "Hauler II" "Witty Moniker"
+		ship "Container Transport" "Basilisk"
 		ship "Freighter" "Imaginative Name"
+	on offer
+		conversation
+			`Taking a seat in the main bar, you gaze out at the long line of parked cargo haulers on <origin>'s landing pads. It's a peaceful scene and very quiet; the only noises are the creak of turning cranes and the occasional crash as an empty cargo crate falls to the ground. Suddenly, this scene of tranquility is broken. A Shuttle comes careening in and brakes barely in time to avoid hitting the bar. Out of it steps a breathless courier, who rushes in and shouts, "Mars is experiencing a severe food shortage! If you don't hurry and help, millions will starve!"`
+			`	Just then Jacob appears, apprently having heard the news from someone else. He immediately takes charge. Jumping onto a table, he shouts, "All captains, please cancel any prior occupations and help. We need to help, for our honor and the sake of the population of <planet>, which, as you know, is in the <system> system. We leave in five hours EST."` # Earth Standard Time
+			`	He then walks over to your table. "Hello, <first>," he says in a weary voice. "This was not what I thought would happen. Are you ready to go?"`
+			choice
+				`	"Of course!"`
 
+				`	"How did the meeting go?"`
+					goto meeting
+			`	"Perfect. You have been delegated to carry <tons> of cargo. Prepare to leave; we must get there before <date>." He goes off to speak to other captains about their assignments.`
+				accept
+			label meeting
+			`	At this, he perks up and takes a seat. "Luckily, they do not think violence is warranted... yet. They are going to try diplomacy a while longer; I told them we didn't exactly make the best showing. Next time will be much more official and we will have a fleet, not one ship, powerful as <ship> may be. At any rate, you have been assigned <tons> of cargo. We must get to <planet> before <date> if we want to save the inhabitants." He gets up and heads toward another captain, presumably to give them their assignment.`
+				accept
 
 # Miscellaneous Intro
 
