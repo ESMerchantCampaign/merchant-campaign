@@ -155,7 +155,7 @@ mission "RMP: Mars Relief"
 		system "Sol"
 		ship "Hauler II" "Witty Moniker"
 		ship "Container Transport" "Basilisk"
-		ship "Freighter" "Imaginative Name"
+		ship "Freighter (Fancy)" "Imaginative Name"
 	on offer
 		conversation
 			`Taking a seat in the main bar, you gaze out at the long line of parked cargo haulers on <origin>'s landing pads. It's a peaceful scene and very quiet; the only noises are the creak of turning cranes and the occasional crash as an empty cargo crate falls to the ground. Suddenly, this scene of tranquility is broken. A Shuttle comes careening in and brakes barely in time to avoid hitting the bar. Out of it steps a breathless courier, who rushes in and shouts, "Mars is experiencing a severe food shortage! If you don't hurry and help, millions will starve!"`
@@ -171,6 +171,87 @@ mission "RMP: Mars Relief"
 			label meeting
 			`	At this, he perks up and takes a seat. "Luckily, they do not think violence is warranted... yet. They are going to try diplomacy a while longer; I told them we didn't exactly make the best showing. Next time will be much more official and we will have a fleet, not one ship, powerful as <ship> may be. At any rate, you have been assigned <tons> of cargo. We must get to <planet> before <date> if we want to save the inhabitants." He gets up and heads toward another captain, presumably to give them their assignment.`
 				accept
+
+mission "RMP: Farpoint Relief"
+	landing
+	name "Medical Shipment"
+	description "Pick up a shipment of thirty tons of medical gear on <stopovers>, then head to <destination> and drop it off to help the Navy defending <planet>, who have just suffered a pirate raid."
+	deadline
+	source "Mars"
+	stopover "Luna"
+	destination "Farpoint"
+	npc
+		government "Pirate"
+		personality
+			confusion 19
+			staying
+		system "Alnitak"
+		fleet "Large Northern Pirates" 2
+	npc
+		government "Navy (Oathkeeper)"
+		personality
+			confusion 12
+			staying
+		system "Alnitak"
+		fleet "Large Oathkeepers" 2
+	npc
+		government "Alphabet Transport Solutions"
+		personality fleeing launching
+		ship "Hauler II" "Witty Moniker"
+		ship "Container Transport" "Basilisk"
+		ship "Freighter" "Imaginative Name"
+	npc accompany save
+		government "Merchant"
+		personality
+			confusion 30
+			launching
+		fleet
+			names "merchant"
+			variant
+				"Bulk Freighter" 2
+				"Hauler"
+				"Hauler II" 2
+				"Hauler III"
+	npc
+		government "Mercantile Security"
+		personality
+			confusion 20
+			launching
+		ship "Marauder Raven" "Titanium Dagger"
+		ship "Bastion (Heavy)" "Captain Cook"
+		ship "Splinter (Laser)" "J.S. Wright"
+	to offer
+		has "RMP: Mars Relief: done"
+	on offer
+		conversation
+			`The trip to <origin> went fast and successfully and received great thanks; the citizens were almost out of food, on the brink of great hunger.`
+			`	Jacob walks over to your ship in a jolly mood. "Well done, well done, Captain <last>! We proved to that old Alphabet company that we are not out of business yet!" Composing himself, he continues. "Have you ever heard of Admiral Danforth?"`
+			choice
+				`	"Who?"`
+				`	"Can't say as I have."`
+			`	"Admiral Danforth is a very famous man. Perhaps you have heard of Hope; the great evacuation when the volcano erupted; the rescue operation that saved millions.`
+			`	"At any rate, Danforth is the man who rescued these people in a daring feat much like our own today. Recently, what with the war in the south and all, there have been several Navy troops who promised not to fight against those who paint their ships green; I don't remember the exact name.`
+			`	"The Navy can't just fire them, and it would be impolite to make them break their promises. Instead, Parliament has sent them north to defend against the anarchists on pirate worlds in that direction. Their base is on <destination>.`
+			`	"Recently Admiral William Danforth and his division were attacked by a huge pirate fleet. They managed to beat off the anarchists, but many were injured in the process. You've been assigned to take thirty tons of medical goods to <destination>. Godspeed."`
+				accept
+	to complete
+		has "RMP: Farpoint Relief Cargo: active"
+	on complete
+		fail "RMP: Farpoint Relief Cargo"
+
+mission "RMP: Farpoint Relief Cargo"
+	landing
+	invisible
+	source "Luna"
+	cargo "medical gear" 30
+	to offer
+		has "RMP: Farpoint Relief: active"
+	on offer
+		conversation
+			`You contact the person Jacob Schmidt put you in touch with, who tells you that the cargo will soon arrive. After twenty hours, her prediction comes true, and the dockworkers, with much arguing, load the <tons> of cargo into your ship.`
+				accept
+	to complete
+		never
 
 # Miscellaneous Intro
 
