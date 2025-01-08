@@ -232,7 +232,7 @@ mission "RMP: Farpoint Relief"
 			`	"Admiral Danforth is a very famous man. Perhaps you have heard of Hope; the great evacuation when the volcano erupted; the rescue operation that saved millions.`
 			`	"At any rate, Danforth is the man who rescued these people in a daring feat much like our own today. Recently, what with the war in the south and all, there have been several Navy troops who promised not to fight against those who paint their ships green; I don't remember the exact name.`
 			`	"The Navy can't just fire them, and it would be impolite to make them break their promises. Instead, Parliament has sent them north to defend against the anarchists on pirate worlds in that direction. Their base is on <destination>.`
-			`	"Recently Admiral William Danforth and his division were attacked by a huge pirate fleet. They managed to beat off the anarchists, but many were injured in the process. You've been assigned to take thirty tons of medical goods to <destination>. Godspeed."`
+			`	"Recently Admiral William Danforth and his division were attacked by a huge pirate fleet. They managed to beat off the anarchists, but many were injured in the process. You've been assigned to take thirty tons of medical goods to <destination>. Godspeed." As you turn to leave, he calls, "One more thing, <first>. Do anything Admiral Danforth asks you, please."`
 				accept
 	to complete
 		has "RMP: Farpoint Relief Cargo: active"
@@ -252,6 +252,38 @@ mission "RMP: Farpoint Relief Cargo"
 				accept
 	to complete
 		never
+
+mission "RMP: Unagi Oathkeeper Rescue"
+	landing
+	name "Carrier Repair"
+	description "Admiral Danforth asked you to rescue a stranded Carrier in <waypoints>."
+	waypoint "Unagi"
+	npc accompany save
+		government "Navy (Oathkeeper)"
+		personality derelict heroic
+		system "Unagi"
+		ship "Carrier" "R.N.S. Anaconda"
+	npc
+		government "Navy (Oathkeeper)"
+		personality heroic
+		system "Unagi"
+		fleet
+			names "republic fighters"
+			variant
+				"Lance" 8
+				"Combat Drone" 6
+	to offer
+		has "RMP: Farpoint Relief: done"
+	on offer
+		payment 500000
+		conversation
+			`Admiral Danforth approaches <ship> the moment it touches down. "I assume you're the captain Republic Mercantile sent?" he asks briskly. "To be frank, we need those supplies. The pirate raid was terrible; half our fleet was put out of commission."`
+			choice
+				`	"That's right."`
+				`	"The distinguished Admiral is correct."`
+			`	"I'm sorry, I forgot to ask your name. I've been somewhat preoccupied lately." He gives you an apologetic smile. "I'm <first> <last>," you say.`
+			`	"I see. I'm Admiral Danforth, as you may already know. Thank you so much for bringing these supplies; they'll be a huge help. I have one more request for the captain who has saved so many; would you be willing to rescue a disabled Carrier, the <npc>, who is stuck in <waypoints>? I can't currently spare the men, and it's a wonder the Carrier's crew hasn't been destroyed yet. Jerry and his squadron must be holding out well." Since Jacob Schmidt told you to do anything Danforth asked, you accept.`
+				accept
 
 # Miscellaneous Intro
 
