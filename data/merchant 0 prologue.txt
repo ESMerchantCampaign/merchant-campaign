@@ -157,8 +157,12 @@ mission "RMP: Mars Relief"
 		ship "Container Transport" "Basilisk"
 		ship "Freighter (Fancy)" "Imaginative Name"
 	on offer
+		log `Took Jacob Schmidt of the Republic Mercantile on a trip to bargain about trade routes with the Syndicate. Turns out the aggressor is a fairly recent startup named "Alphabet Transport Solutions."`
+		log "People" "Jacob Schmidt" `Jacob is the CTO of the Republic Mercantile; the man who sets all the trade routes up and keeps them running by diplomacy. He is a pacifist and does not believe in violence.`
+		log "Factions" "Republic Mercantile" `The Republic Mercantile has recently suffered a loss in profits from trade routes to the north. The Syndicate was originally suspected as the aggressor, but it later turned out to be a startup by the name of "Alphabet Transport Solutions."`
+		log "Factions" "Alphabet Transport Solutions" `Alphabet Transport Solutions, more commonly known by its acronym ATS, is a recent startup aiming to take control of the northern trade lanes. One of the leaders is a woman by the name of "Daniella Dalga." According to Jacob Schmidt, she is a retired pirate.`
 		conversation
-			`Taking a seat in the main bar, you gaze out at the long line of parked cargo haulers on <origin>'s landing pads. It's a peaceful scene and very quiet; the only noises are the creak of turning cranes and the occasional crash as an empty cargo crate falls to the ground. Suddenly, this scene of tranquility is broken. A Shuttle comes careening in and brakes barely in time to avoid hitting the bar. Out of it steps a breathless courier, who rushes in and shouts, "Mars is experiencing a severe food shortage! If you don't hurry and help, millions will starve!"`
+			`Taking a seat in the main bar, you gaze out at the long line of parked cargo haulers on <origin>'s landing pads. It's a peaceful scene and very quiet; the only noises are the creak of turning cranes and the occasional crash as an empty cargo crate falls to the ground. Suddenly, this scene of tranquility is broken. An Arrow comes careening in and brakes barely in time to avoid hitting the bar. Out of it steps a breathless courier, who rushes in and shouts, "Mars is experiencing a severe food shortage! If you don't hurry and help, millions will starve!"`
 			`	Just then Jacob appears, apprently having heard the news from someone else. He immediately takes charge. Jumping onto a table, he shouts, "All captains, please cancel any prior occupations and help. We need to help, for our honor and the sake of the population of <planet>, which, as you know, is in the <system> system. We leave in five hours EST."` # Earth Standard Time
 			`	He then walks over to your table. "Hello, <first>," he says in a weary voice. "This was not what I thought would happen. Are you ready to go?"`
 			choice
@@ -223,6 +227,9 @@ mission "RMP: Farpoint Relief"
 	to offer
 		has "RMP: Mars Relief: done"
 	on offer
+		log "Factions" "Oathkeepers" `The "Oathkeepers" are a regiment of Navy officers who were captured by the Free Worlds and paroled on the condition that they take no further part in fighting against the Free Worlds. They are led by William Danforth, a famous Navy admiral. Their stated mission is to protect the Paradise Worlds from the pirates who live on the anarchist worlds in the far north of human space.`
+		log "People" "William Danforth" `Danforth is a famous Navy Admiral who is a folk hero throughout human space due to his fair and honorable behavior and his willingness to use his fleet to assist people in need, even when he has to go against Parliament's orders to do so. He is currently in charge of the Navy regiment who call themselves the "Oathkeepers."`
+		log "Brought a load of food to the starving citizens of Mars along with the Republic Mercantile."
 		conversation
 			`The trip to <origin> went fast and successfully and received great thanks; the citizens were almost out of food, on the brink of great hunger.`
 			`	Jacob walks over to your ship in a jolly mood. "Well done, well done, Captain <last>! We proved to that old Alphabet company that we are not out of business yet!" Composing himself, he continues. "Have you ever heard of Admiral Danforth?"`
@@ -230,9 +237,9 @@ mission "RMP: Farpoint Relief"
 				`	"Who?"`
 				`	"Can't say as I have."`
 			`	"Admiral Danforth is a very famous man. Perhaps you have heard of Hope; the great evacuation when the volcano erupted; the rescue operation that saved millions.`
-			`	"At any rate, Danforth is the man who rescued these people in a daring feat much like our own today. Recently, what with the war in the south and all, there have been several Navy troops who promised not to fight against those who paint their ships green; I don't remember the exact name.`
-			`	"The Navy can't just fire them, and it would be impolite to make them break their promises. Instead, Parliament has sent them north to defend against the anarchists on pirate worlds in that direction. Their base is on <destination>.`
-			`	"Recently Admiral William Danforth and his division were attacked by a huge pirate fleet. They managed to beat off the anarchists, but many were injured in the process. You've been assigned to take thirty tons of medical goods to <destination>. Godspeed." As you turn to leave, he calls, "One more thing, <first>. Do anything Admiral Danforth asks you, please."`
+			`	"At any rate, he is the man who rescued these people in a daring feat much like our own today. Recently, what with the war in the south and all, there have been several Navy units who have been captured and then liberated after promising not to fight against the Free Worlds.`
+			`	"The Navy can't just fire them, and it would be impolite to make them break their promises. Instead, Parliament has sent them north to defend the Paradise Worlds against the anarchists in that direction. Their base is on <destination>.`
+			`	"Recently Admiral William Danforth and his division were attacked by a huge pirate fleet. They managed to beat off the anarchists, but many were injured in the process. You've been assigned to take thirty tons of medical goods to <destination>. Godspeed." As you turn to leave, he calls, "One more thing, <first>. Do anything he asks you, please."`
 				accept
 	to complete
 		has "RMP: Farpoint Relief Cargo: active"
@@ -272,10 +279,18 @@ mission "RMP: Unagi Oathkeeper Rescue"
 			variant
 				"Lance" 8
 				"Combat Drone" 6
+	npc
+		government "Pirate"
+		personality
+			confusion 20
+			staying
+		system "Unagi"
+		ship "Firebird" "Ashen Delight"
 	to offer
 		has "RMP: Farpoint Relief: done"
 	on offer
 		payment 500000
+		log "Took a shipment of medical goods to Admiral Danforth and the Oathkeepers, who recently suffered a pirate attack."
 		conversation
 			`Admiral Danforth approaches <ship> the moment it touches down. "I assume you're the captain Republic Mercantile sent?" he asks briskly. "To be frank, we need those supplies. The pirate raid was terrible; half our fleet was put out of commission."`
 			choice
