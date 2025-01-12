@@ -36,9 +36,11 @@ To save, you must both click save to save the data for draw.io, then click File-
 
 # Miscellaneous info
 
-* Republic Mercantile will be located in New China in the Merak system
-* Republic Mercantile plays a big role in New China’s economy and may have even been subcontracted by Parliament to help keep the terraforming system afloat, though they were not given nearly enough funds for the task.
-* There will be a few jobs that you do that are more lucrative than normal to lure players to New China
+* New China has been renamed to Kunlun
+* Republic Mercantile will be located in Kunlun in the Merak system
+* Republic Mercantile plays a big role in Kunlun’s economy and may have even been subcontracted by Parliament to help keep the terraforming system afloat, though they were not given nearly enough funds for the task.
+* The description of Kunlun has been updated to mention Republic Mercantile from the start of the game
+* There will be a few jobs that you do that are more lucrative than normal to lure players to Kunlun
   * I made wholesale shipping jobs and plan to also make Martini relief jobs during the one month evacuation period
   * bene-dictator plans to make medical supply jobs
   * Jarl Dane is working on (timed?) delivery jobs where their freighter was disabled, so you need to make the delivery yourself
@@ -51,6 +53,3 @@ To save, you must both click save to save the data for draw.io, then click File-
 * Each branch will have its own character, plus one character that you talk to in the beginning prior to choosing a branch.
 * We have not decided on rewards for beating the campaign yet, but this can probably wait until later.
 * We have also not decided on a salary and/or dues and any perks you get immediately besides better job board missions
-* I have asked if it is possible to change the name of New China, with Jarl Dane providing reasoning below:
-![image](https://github.com/user-attachments/assets/98423e0a-de80-4f3c-83b8-f4c18b734f14)
-* The description of New China has been updated to mention Republic Mercantile from the start of the game, even if the name doesn't change
