@@ -1,1 +1,55 @@
+# Heng Ping is the head of Republic Mercantile Weather and Climate
+mission "RM Terraforming 0"
+	name "Reduce Terraforming Expenses"
+	description `"Republic Mercantile is spending large sums of credits on <origin>'s dated terraforming system. See if you can find a cheaper approach."`
+	minor
+	source "New China"
+	to offer
+		"republic mercantile jobs" >= 10
+		not "Terraforming 1: offered"
+		"days since start" >= "rm terraforming defer date" + 10
+	to complete
+		has "Terraforming 7: done"
+	on offer
+		conversation
+			`	You have done a lot of jobs for Republic Mercanitle. Would you like to approach Republic Mercantile’s recruitment desk if they will let you officially join as a member?`
+			choice
+				`	(Yes)`
+				`	(Not right now)`
+					defer
+			`	You approach the recruitment desk. On it are several posters.`
+			`	"You pay. You trade. You survive until the next day. Republic Mercantile, serving merchants for over 250 years."`
+			`	"When you fly alone you fly with pirates. Join Republic Mercantile, serving merchants for over 250 years."`
+			`	"We protec. We attac. But most importantly, we have your bac. Republic Mercantile, serving merchants for over 250 years."`
+			`	"Feed the hungry, not the pirates. Join Republic Mercantile, serving merchants for over 250 years."`
+			`	"Hello, I’m Jamie of Republic Mercantile Recruiting. How can I help you?"`
+			choice
+				`	"Are you hiring?"`
+					goto job
+				`	"I would like to join Republic Mercantile."`
+				`	"I would like to purchase a service plan."`
+			`	"Well then, you've come to the right place! We offer three tiers of protection depending on your needs."`
+			# Adds Republic Mercantile fleets to certain systems.
+			`	"The Basic Tier grants you access to our refuelling services. It costs 2,000 credits per day."`
+			# Unlocks a job on Republic Mercantile outposts where you can hire an escort for 30 days. This escort is complimentary, but must be returned to a Republic Mercantile outpost on time to avoid late fees.
+			`	"The Standard Tier grants you a 6% discount on all Republic Mercantile outfits, and additionally grants you access to our complimentary 30-day escort services. It costs 10,000 credits per day. You will have to pay a late fee for every day in which you miss your return time, but you can return your ship to any Republic Mercantile outpost."`
+			# Unlocks a job that lets you receive payment for your goods as if you were selling on a different planet. It takes a few days for you to get the payment, but Republic Mercantile will send it as fast as possible. Also lets you hire escorts for 250 days, which are still complimentary. This escort is much more useful since you have time to visit basically any planet in human space and still have time to drop it off at an outpost.
+			`	"The Premium Tier is the most valuable, and grants you direct access to our fast and secure shipping line. It also allows you to hire escorts for 250 days, and grants you a 50% discount on all Republic Mercantile outfits. It is the most expensive, costing you 250,000 credits per day."`
+			# You start with the basic tier for free as soon as you accept this mission. You get upgraded to standard when you officially join, and then get the premium tier about halfway through the campaign. If you purchase the tiers first, you get them early, but you have to pay if you haven't unlocked the free version through the campaign. You lose Republic Mercantile services if you join a side that isn't Republic Mercantile.` 
+			choice
+				`	(Choose the Basic Tier)`
+					goto basic
+				`	(Choose the Standard Tier)`
+					goto standard
+				`	(Choose the Premium Tier)`
+					goto premium
+				`	"Actually, I was looking to become a member. I want to work for you."`
+			label job
 
+
+	on defer
+		"rm terraforming defer date" = "days since start"
+	on complete
+		conversation
+			# No diactritics can be used without Unicode support
+			`As you land on <destination>, you recall Dr. Ping's request to find a cheaper way to terraform <destination>.`
