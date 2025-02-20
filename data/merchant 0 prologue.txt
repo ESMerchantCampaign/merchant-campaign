@@ -1,7 +1,41 @@
+mission "RM Basic Plan"
+	invisible
+	landing
+	to offer
+		has "republic mercantile: basic plan"
+	to fail
+		has "RM Terraforming 1: active"
+	on daily
+		"payment" -2000
+
+mission "RM Standard Plan"
+	invisible
+	landing
+	to offer
+		has "republic mercantile: standard plan"
+	to fail
+		has "event: joined republic mercantile"
+	on daily
+		"payment" -30000
+
+mission "RM Premium Plan"
+	invisible
+	landing
+	to offer
+		has "republic mercantile: premium plan"
+	to fail
+		has "rm choose emporium"
+	on daily
+		"payment" -250000
+
 # Heng Ping is the head of Republic Mercantile Weather and Climate
 mission "RM Terraforming 0"
 	name "Reduce Terraforming Expenses"
 	description `"Republic Mercantile is spending large sums of credits on <origin>'s dated terraforming system. See if you can find a cheaper approach."`
+	substitutions
+		"<farmers on your home planet>" "farmers back on New Boston"
+		"<farmers on your home planet>" "human farmers back on Greenwater"
+			has "hai space start"
 	minor
 	source "New China"
 	to offer
@@ -17,7 +51,7 @@ mission "RM Terraforming 0"
 				`	(Yes)`
 				`	(Not right now)`
 					defer
-			`	You approach the recruitment desk. On it are several posters.`
+			`	You approach the earthen spaceport recruitment desk, which has several posters taped onto it.`
 			`	"You pay. You trade. You survive until the next day. Republic Mercantile, serving merchants for over 250 years."`
 			`	"When you fly alone you fly with pirates. Join Republic Mercantile, serving merchants for over 250 years."`
 			`	"We protec. We attac. But most importantly, we have your bac. Republic Mercantile, serving merchants for over 250 years."`
@@ -45,6 +79,10 @@ mission "RM Terraforming 0"
 					goto premium
 				`	"Actually, I was looking to become a member. I want to work for you."`
 			label job
+			`	"Really? Well, in that case, you want to talk to Dr. Ping. Let me call him now."`
+			`	As you get up, you notice that Jamie is wearing a leather vest, cargo pants, and brown work boots. He looks more like the <farmers on your home planet> than what you would expect a recruitment officer to look like.`
+			
+
 
 
 	on defer
