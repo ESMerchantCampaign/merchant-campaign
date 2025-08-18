@@ -479,7 +479,7 @@ mission "Republic Mercantile Merchant Rescue [0]"
 				has "event: joined republic mercantile"
 				random < 35
 			random < 20
-		has "reputation: Merchant" >= 0
+		"reputation: Merchant" >= 0
 	on complete
 		payment
 		payment 5000
@@ -536,7 +536,7 @@ mission "Republic Mercantile Merchant Rescue [1]"
 				has "event: joined republic mercantile"
 				random < 35
 			random < 20
-		has "reputation: Merchant" >= 0
+		"reputation: Merchant" >= 0
 	on complete
 		payment
 		payment 5000
@@ -593,7 +593,7 @@ mission "Republic Mercantile Merchant Rescue [2]"
 				has "event: joined republic mercantile"
 				random < 35
 			random < 20
-		has "reputation: Merchant" >= 0
+		"reputation: Merchant" >= 0
 	on complete
 		payment
 		payment 5000
