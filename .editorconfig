@@ -9,3 +9,6 @@ trim_trailing_whitespace = true
 trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 8
+
+[README.md]
+charset = UTF-8
