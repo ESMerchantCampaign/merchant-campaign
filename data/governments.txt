@@ -22,7 +22,6 @@ government "Republic Mercantile (Escort)"
 	"attitude toward"
 		"Pirate" -0.2
 		"Bounty (FW Disguised)" -0.2
-		"Pirate (Devil-Run Gang)" -0.2
 		"Korath" -0.2
 		"Merchant" 1
 	"bribe" .1
